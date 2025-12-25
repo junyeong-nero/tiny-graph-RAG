@@ -55,19 +55,48 @@ uv pip install -e ".[dev]"
 
 ## Configuration
 
-Set up your OpenAI API key:
+Mini-Graph-RAG can be configured using a `config.yaml` file or environment variables. Environment variables take precedence over settings defined in the YAML file.
+
+### YAML Configuration
+
+Create a `config.yaml` in your project root or current working directory:
+
+```yaml
+# OpenAI API Settings
+openai:
+    # Base URL for OpenAI-compatible API (optional)
+    # Examples: http://localhost:11434/v1 (Ollama), Azure OpenAI endpoints, etc.
+    base_url: null
+    # Model name to use
+    model: "gpt-4o-mini"
+    # Hyperparameters
+    temperature: 0.0
+    max_tokens: 4096
+
+# Text Chunking Settings
+chunking:
+    chunk_size: 1000
+    chunk_overlap: 200
+```
+
+### Environment Variables
+
+The OpenAI API key is required and must be set via environment variable:
 
 ```bash
 export OPENAI_API_KEY='your-api-key-here'
 ```
 
-Optional environment variables:
+Optional variables (overrides `config.yaml`):
 
-```bash
-export OPENAI_MODEL='gpt-4o-mini'  # Default model
-export CHUNK_SIZE='1000'           # Characters per chunk
-export CHUNK_OVERLAP='200'         # Overlap between chunks
-```
+| Variable | YAML Path | Description | Default |
+|----------|-----------|-------------|---------|
+| `OPENAI_MODEL` | `openai.model` | Model name to use | `gpt-4o-mini` |
+| `OPENAI_BASE_URL` | `openai.base_url` | Base URL for API | `null` |
+| `OPENAI_TEMPERATURE` | `openai.temperature` | LLM temperature | `0.0` |
+| `OPENAI_MAX_TOKENS` | `openai.max_tokens` | Max tokens for response | `4096` |
+| `CHUNK_SIZE` | `chunking.chunk_size` | Characters per chunk | `1000` |
+| `CHUNK_OVERLAP` | `chunking.chunk_overlap` | Overlap between chunks | `200` |
 
 ## Usage
 
@@ -149,6 +178,44 @@ query = "김첨지에 대해서 알려줘."
 print(f"\nQuery: {query}")
 response = rag.query(query)
 print(f"Response: {response}")
+```
+
+**Output:**
+
+```text
+Query: 김첨지에 대해서 알려줘.
+Response: 요약 — 김첨지에 대해 알려드리겠습니다.
+
+- 신분·역할: 이야기의 주인공이자 인력거꾼입니다. (엔티티: 김첨지 — 이야기 속 주인공, 인력거꾼)
+- 현재 상황·행동:
+  - 술집에 머물며 술을 마십니다. (김첨지 --[LOCATED_IN]--> 술집, 김첨지 --[DRINKS]--> 술)
+  - 자기 아내의 시체를 집에 뻐들쳐 놓았다고 진술합니다. (김첨지 --[PLACED]--> 마누라 시체)
+  - 그날 전차 정류장에 갔었고, 전차 정류장 근처를 빙빙 돌며 손님을 기다리려는 계획을 세웠습니다. (김첨지 --[WENT_TO]--> 전차 정류장, 김첨지 --[PLANS_TO_WAIT_AT]--> 전차 정류장)
+  - 학생 승객을 정거장까지 태워다 주었습니다(그 학생을 데려다 주었다). (김첨지 --[TRANSPORTS_TO]--> 그 학생)
+  - 자기를 불러 멈춘 사람이 학교 학생임을 알아보았습니다. (김첨지 --[RECOGNIZED]--> 그 학교 학생; 사람 --[ALIAS_OF]--> 그 학교 학생)
+- 성격·내면·기억:
+  - 약을 쓰면 병이 재미를 붙여 자꾸 온다는 신조(신념)를 가지고 있습니다. (김첨지 --[HOLDS_BELIEF]--> 신조(信條))
+  - 기적에 가까운 벌이를 했다는 기쁨을 오래 간직하려 합니다. (김첨지 --[REMINISCES_ABOUT]--> 기적에 가까운 벌이)
+  - 술을 마시며 감정을 드러내고(울고 웃는 등) 아내의 죽음을 호소하는 장면이 있습니다. (엔티티 설명: 술집에 있는 주정뱅이 남성, 이야기하고 술을 마시며 아내의 죽음을 호소함)
+- 외형·묘사:
+  - 바짝 마른 얼굴과 턱밑에 특이한 수염이 있는 것으로 묘사됩니다. (김첨지 --[HAS_ATTRIBUTE]--> 김첨지)
+  - 걸음걸이가 스케이트 타는 모양으로 비유되어 묘사됩니다. (김첨지 --[RELATED_TO]--> 스케이트)
+
+사용한 엔티티·관계 근거:
+- 엔티티: 김첨지 (이야기 속 주인공, 인력거꾼)
+- 관계들:
+  - 김첨지 --[LOCATED_IN]--> 술집
+  - 김첨지 --[DRINKS]--> 술
+  - 김첨지 --[PLACED]--> 마누라 시체
+  - 김첨지 --[WENT_TO]--> 전차 정류장
+  - 김첨지 --[PLANS_TO_WAIT_AT]--> 전차 정류장
+  - 김첨지 --[TRANSPORTS_TO]--> 그 학생
+  - 김첨지 --[RECOGNIZED]--> 그 학교 학생
+  - 사람 --[ALIAS_OF]--> 그 학교 학생
+  - 김첨지 --[HOLDS_BELIEF]--> 신조(信條)
+  - 김첨지 --[REMINISCES_ABOUT]--> 기적에 가까운 벌이
+  - 김첨지 --[RELATED_TO]--> 스케이트
+  - 김첨지 --[HAS_ATTRIBUTE]--> 김첨지
 ```
 
 ## Project Structure

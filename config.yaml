@@ -1,0 +1,23 @@
+# Mini-Graph-RAG Configuration
+
+# OpenAI API Settings
+openai:
+    # Base URL for OpenAI-compatible API (optional)
+    # Use this for Azure OpenAI, local LLMs (Ollama, vLLM), or other compatible endpoints
+    # Examples:
+    #   - https://api.openai.com/v1 (default)
+    #   - http://localhost:11434/v1 (Ollama)
+    #   - https://your-resource.openai.azure.com
+    base_url: null
+
+    # Model name to use
+    model: "gpt-5-mini-2025-08-07"
+
+    # Hyperparameters
+    temperature: 0.0
+    max_tokens: 4096
+
+# Text Chunking Settings
+chunking:
+    chunk_size: 1024
+    chunk_overlap: 64

@@ -1,0 +1,17 @@
+[project]
+name = "mini-graph-rag"
+version = "0.1.0"
+description = "A naive implementation of Graph-based RAG using OpenAI API"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "openai>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[project.scripts]
+mini-graph-rag = "main:main"

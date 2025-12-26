@@ -1,0 +1,1799 @@
+{
+  "entities": {
+    "0a25232d-fe9e-4ba0-9dce-07dac3e54d7a": {
+      "entity_id": "0a25232d-fe9e-4ba0-9dce-07dac3e54d7a",
+      "name": "박제",
+      "entity_type": "CONCEPT",
+      "description": "The concept of being a 'taxidermied genius'.",
+      "attributes": {},
+      "source_chunks": [
+        "c32b1568-bf9e-4228-90b7-144b686baceb"
+      ]
+    },
+    "13408994-6968-4859-b350-aac8debaea19": {
+      "entity_id": "13408994-6968-4859-b350-aac8debaea19",
+      "name": "니코틴",
+      "entity_type": "CONCEPT",
+      "description": "A substance that affects the mind and body.",
+      "attributes": {},
+      "source_chunks": [
+        "c32b1568-bf9e-4228-90b7-144b686baceb"
+      ]
+    },
+    "d7a18cdb-fcaf-4578-a9e8-192a929e95f6": {
+      "entity_id": "d7a18cdb-fcaf-4578-a9e8-192a929e95f6",
+      "name": "위트",
+      "entity_type": "CONCEPT",
+      "description": "Wit, a form of intelligent humor.",
+      "attributes": {},
+      "source_chunks": [
+        "c32b1568-bf9e-4228-90b7-144b686baceb"
+      ]
+    },
+    "d6d87b04-ec17-4426-8c30-95f7cfdcbd19": {
+      "entity_id": "d6d87b04-ec17-4426-8c30-95f7cfdcbd19",
+      "name": "파라독스",
+      "entity_type": "CONCEPT",
+      "description": "Paradox, a statement that contradicts itself.",
+      "attributes": {},
+      "source_chunks": [
+        "c32b1568-bf9e-4228-90b7-144b686baceb"
+      ]
+    },
+    "8f576021-b46e-457c-bce6-5eeab8e601a1": {
+      "entity_id": "8f576021-b46e-457c-bce6-5eeab8e601a1",
+      "name": "19세기",
+      "entity_type": "EVENT",
+      "description": "The 19th century, a historical period.",
+      "attributes": {},
+      "source_chunks": [
+        "c32b1568-bf9e-4228-90b7-144b686baceb"
+      ]
+    },
+    "1d878690-ba70-4b8a-9959-aff188cead26": {
+      "entity_id": "1d878690-ba70-4b8a-9959-aff188cead26",
+      "name": "도스토예프스키",
+      "entity_type": "PERSON",
+      "description": "Fyodor Dostoevsky, a Russian novelist.",
+      "attributes": {},
+      "source_chunks": [
+        "c32b1568-bf9e-4228-90b7-144b686baceb"
+      ]
+    },
+    "c9421bbd-7dd3-442a-bae6-179d1c0835f0": {
+      "entity_id": "c9421bbd-7dd3-442a-bae6-179d1c0835f0",
+      "name": "위고",
+      "entity_type": "PERSON",
+      "description": "Victor Hugo, a French writer.",
+      "attributes": {},
+      "source_chunks": [
+        "c32b1568-bf9e-4228-90b7-144b686baceb"
+      ]
+    },
+    "b504a3c0-8d41-44af-81e9-75c8179d1b96": {
+      "entity_id": "b504a3c0-8d41-44af-81e9-75c8179d1b96",
+      "name": "프랑스",
+      "entity_type": "PLACE",
+      "description": "Country in Western Europe.",
+      "attributes": {},
+      "source_chunks": [
+        "c32b1568-bf9e-4228-90b7-144b686baceb"
+      ]
+    },
+    "e15f0034-c2bd-403f-998c-ed2fb2013ff5": {
+      "entity_id": "e15f0034-c2bd-403f-998c-ed2fb2013ff5",
+      "name": "여왕봉",
+      "entity_type": "PERSON",
+      "description": "A reference to a queen or a prominent woman.",
+      "attributes": {},
+      "source_chunks": [
+        "665d757e-5014-4182-a1a2-43659a56fc76"
+      ]
+    },
+    "d7a46f8b-97bc-4cc9-b246-770fee8676e5": {
+      "entity_id": "d7a46f8b-97bc-4cc9-b246-770fee8676e5",
+      "name": "미망인",
+      "entity_type": "PERSON",
+      "description": "Refers to a widow.",
+      "attributes": {},
+      "source_chunks": [
+        "665d757e-5014-4182-a1a2-43659a56fc76"
+      ]
+    },
+    "15fb78be-8971-4294-be2c-58605386eb20": {
+      "entity_id": "15fb78be-8971-4294-be2c-58605386eb20",
+      "name": "33번지",
+      "entity_type": "PLACE",
+      "description": "An address representing a location with 18 households. The location where the narrator and his wife live",
+      "attributes": {},
+      "source_chunks": [
+        "665d757e-5014-4182-a1a2-43659a56fc76",
+        "7154c46c-66fd-423e-9331-614ef35ef80c"
+      ]
+    },
+    "8d58bfa4-8383-4f5b-829f-1290d1baaa3c": {
+      "entity_id": "8d58bfa4-8383-4f5b-829f-1290d1baaa3c",
+      "name": "18가구",
+      "entity_type": "OTHER",
+      "description": "Refers to the 18 households living at 33번지.",
+      "attributes": {},
+      "source_chunks": [
+        "665d757e-5014-4182-a1a2-43659a56fc76"
+      ]
+    },
+    "e9cf3056-46f9-4810-980e-94e901ba777e": {
+      "entity_id": "e9cf3056-46f9-4810-980e-94e901ba777e",
+      "name": "대문",
+      "entity_type": "OTHER",
+      "description": "The main gate representing the entrance to the 18 households. The front gate where the sounds of footsteps lead to",
+      "attributes": {},
+      "source_chunks": [
+        "665d757e-5014-4182-a1a2-43659a56fc76",
+        "2b82d1b8-162b-49fb-a8c6-d36ade5cb0ea"
+      ]
+    },
+    "cb3ce785-2216-42ce-98e3-af54079f1a59": {
+      "entity_id": "cb3ce785-2216-42ce-98e3-af54079f1a59",
+      "name": "장사치",
+      "entity_type": "PERSON",
+      "description": "Refers to merchants or traders.",
+      "attributes": {},
+      "source_chunks": [
+        "665d757e-5014-4182-a1a2-43659a56fc76"
+      ]
+    },
+    "765aa0a3-93b5-4cbe-b8b6-beecb3f9911e": {
+      "entity_id": "765aa0a3-93b5-4cbe-b8b6-beecb3f9911e",
+      "name": "내 아내",
+      "entity_type": "PERSON",
+      "description": "The narrator's wife, described as beautiful and precious.",
+      "attributes": {},
+      "source_chunks": [
+        "d7bf4d2d-2cb0-402e-addf-b2859a1bee6c"
+      ]
+    },
+    "828b6e57-f871-4031-b590-b1bb30eaa2e3": {
+      "entity_id": "828b6e57-f871-4031-b590-b1bb30eaa2e3",
+      "name": "33번 지 18 가구",
+      "entity_type": "PLACE",
+      "description": "A specific location mentioned where the narrator and his wife live.",
+      "attributes": {},
+      "source_chunks": [
+        "d7bf4d2d-2cb0-402e-addf-b2859a1bee6c"
+      ]
+    },
+    "c7eb9f15-5032-4478-9756-d971920cc15b": {
+      "entity_id": "c7eb9f15-5032-4478-9756-d971920cc15b",
+      "name": "방",
+      "entity_type": "CONCEPT",
+      "description": "The narrator's room, which he finds comfortable and suitable for himself. The rooms of the narrator and his wife, contrasting in decoration. The room where the events take place.",
+      "attributes": {},
+      "source_chunks": [
+        "d7bf4d2d-2cb0-402e-addf-b2859a1bee6c",
+        "32017cae-682c-4be8-a2b5-3439f022ff84",
+        "086bd89b-3d2f-4f2d-9cd5-6f98a2b5973e"
+      ]
+    },
+    "8419617b-05fe-4312-8133-1c647cc8deba": {
+      "entity_id": "8419617b-05fe-4312-8133-1c647cc8deba",
+      "name": "꽃",
+      "entity_type": "CONCEPT",
+      "description": "A metaphorical representation of beauty, specifically referring to the narrator's wife.",
+      "attributes": {},
+      "source_chunks": [
+        "d7bf4d2d-2cb0-402e-addf-b2859a1bee6c"
+      ]
+    },
+    "93da7c62-27b9-490b-85ea-f3be24d4e276": {
+      "entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "name": "아내",
+      "entity_type": "PERSON",
+      "description": "The narrator's wife, mentioned in relation to the living space. The narrator's wife, associated with various cosmetics and scents. The narrator's wife, who is mentioned as being out. The narrator's wife, who has a routine and social interactions. The narrator's wife, who prepares meals and has guests. The narrator's wife, who is involved in a mysterious situation regarding money. The narrator's wife, who is mentioned in relation to money and the narrator's feelings. The narrator's wife, who has a significant presence in the text. The narrator's wife. The narrator's wife, who exhibits a mysterious demeanor. The narrator's wife who understands his feelings. The narrator's wife who cares for him during his illness. The narrator's wife, involved in a questionable act regarding medication. The narrator's wife, involved in a conflict with the narrator.",
+      "attributes": {},
+      "source_chunks": [
+        "f77df291-bbfe-42f3-adb5-461dff321850",
+        "8c8de878-3d27-49d6-9bdd-e22f3edf3e3d",
+        "323b2b4e-8821-4dc3-94f5-cdf3d5948f76",
+        "002aeec1-9097-40a5-bb2d-a90b837eea3b",
+        "2b82d1b8-162b-49fb-a8c6-d36ade5cb0ea",
+        "e4901f7a-c6a5-4423-85bc-7104193c9ca9",
+        "182270ba-c6db-49a8-b40b-b29de4fc6d40",
+        "086bd89b-3d2f-4f2d-9cd5-6f98a2b5973e",
+        "11a84ce7-b308-477f-8c48-8b9abd7c62c8",
+        "33c9d99a-46e5-4b91-b2da-3227d703ff45",
+        "28db10e7-bb55-403e-be21-220d7dff18d0",
+        "1c59ed7f-e597-45e4-a6b0-77b1ba97744a",
+        "4c4d4256-6aa9-4158-a75e-ea28cb500f6c",
+        "a5bfdcea-cb45-4bba-a6f8-0deda8490791",
+        "bb6c0972-b95b-4a25-8a6c-7b9fdcd33726",
+        "7154c46c-66fd-423e-9331-614ef35ef80c",
+        "32017cae-682c-4be8-a2b5-3439f022ff84",
+        "bc61c03b-410e-4190-8f56-30ec50769530",
+        "efb2ad18-9631-4fce-86f1-e15cce27c15a",
+        "7c133a09-d601-41ba-a0f8-23e61e339be4",
+        "2e07d1c4-8469-40b6-a57a-873b564ef24a"
+      ]
+    },
+    "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7": {
+      "entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "name": "내 방",
+      "entity_type": "PLACE",
+      "description": "The narrator's personal room, described as a comfortable and absolute state. The narrator's room where he spends time. The narrator's room, which he wishes to access.",
+      "attributes": {},
+      "source_chunks": [
+        "8c8de878-3d27-49d6-9bdd-e22f3edf3e3d",
+        "bb6c0972-b95b-4a25-8a6c-7b9fdcd33726",
+        "f77df291-bbfe-42f3-adb5-461dff321850",
+        "2e07d1c4-8469-40b6-a57a-873b564ef24a"
+      ]
+    },
+    "75cea673-e971-4f14-b6e1-4026be99b76c": {
+      "entity_id": "75cea673-e971-4f14-b6e1-4026be99b76c",
+      "name": "아랫방",
+      "entity_type": "PLACE",
+      "description": "The room below the narrator's room, which receives sunlight.",
+      "attributes": {},
+      "source_chunks": [
+        "f77df291-bbfe-42f3-adb5-461dff321850"
+      ]
+    },
+    "fb319477-22b7-4a7d-b54a-bfda1a2bad50": {
+      "entity_id": "fb319477-22b7-4a7d-b54a-bfda1a2bad50",
+      "name": "윗방",
+      "entity_type": "PLACE",
+      "description": "The room above the narrator's room, which does not receive sunlight.",
+      "attributes": {},
+      "source_chunks": [
+        "f77df291-bbfe-42f3-adb5-461dff321850"
+      ]
+    },
+    "b04518ac-cb47-41fb-96b0-236af0d3ca6f": {
+      "entity_id": "b04518ac-cb47-41fb-96b0-236af0d3ca6f",
+      "name": "들창",
+      "entity_type": "CONCEPT",
+      "description": "A window that opens to the east, allowing sunlight to enter.",
+      "attributes": {},
+      "source_chunks": [
+        "f77df291-bbfe-42f3-adb5-461dff321850"
+      ]
+    },
+    "f4e545c5-89c2-4373-a8d3-9b7bdf060ebd": {
+      "entity_id": "f4e545c5-89c2-4373-a8d3-9b7bdf060ebd",
+      "name": "거울",
+      "entity_type": "OTHER",
+      "description": "A mirror used by the narrator's wife for personal grooming. A mirror, representing practicality and playfulness. An object the narrator looks into to check his appearance.",
+      "attributes": {},
+      "source_chunks": [
+        "bc61c03b-410e-4190-8f56-30ec50769530",
+        "32017cae-682c-4be8-a2b5-3439f022ff84",
+        "f77df291-bbfe-42f3-adb5-461dff321850"
+      ]
+    },
+    "68e2975d-a056-4e9d-ba73-7a6c69fbe734": {
+      "entity_id": "68e2975d-a056-4e9d-ba73-7a6c69fbe734",
+      "name": "지리가미",
+      "entity_type": "OTHER",
+      "description": "A tool used by the narrator's wife, mentioned in the context of playful activities.",
+      "attributes": {},
+      "source_chunks": [
+        "f77df291-bbfe-42f3-adb5-461dff321850"
+      ]
+    },
+    "e41be569-aad0-4b59-8f5c-dbd7df2032f4": {
+      "entity_id": "e41be569-aad0-4b59-8f5c-dbd7df2032f4",
+      "name": "화장품",
+      "entity_type": "OTHER",
+      "description": "Cosmetics that the narrator finds attractive.",
+      "attributes": {},
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    "918ebd00-8734-4be0-8a63-4712b6c1ad08": {
+      "entity_id": "918ebd00-8734-4be0-8a63-4712b6c1ad08",
+      "name": "체취",
+      "entity_type": "CONCEPT",
+      "description": "The scent associated with the narrator's wife.",
+      "attributes": {},
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    "80cc7cc4-043e-4e76-a2c9-c6cb5d290d3a": {
+      "entity_id": "80cc7cc4-043e-4e76-a2c9-c6cb5d290d3a",
+      "name": "치마",
+      "entity_type": "OTHER",
+      "description": "Skirts worn by the narrator's wife, representing her beauty.",
+      "attributes": {},
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    "b4dc6c16-20ff-47ca-9bc1-71dc40981968": {
+      "entity_id": "b4dc6c16-20ff-47ca-9bc1-71dc40981968",
+      "name": "골덴양복",
+      "entity_type": "OTHER",
+      "description": "A corduroy suit worn by the narrator.",
+      "attributes": {},
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    "b8f9ac52-7e23-45f1-ab6a-78a458660fa8": {
+      "entity_id": "b8f9ac52-7e23-45f1-ab6a-78a458660fa8",
+      "name": "하이넥 스웨터",
+      "entity_type": "OTHER",
+      "description": "A high-neck sweater worn by the narrator.",
+      "attributes": {},
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    "b59e3774-aff5-4629-a2df-d8cd43fdc052": {
+      "entity_id": "b59e3774-aff5-4629-a2df-d8cd43fdc052",
+      "name": "볕",
+      "entity_type": "CONCEPT",
+      "description": "Sunlight, which is mentioned in relation to the time passing.",
+      "attributes": {},
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    "92b6fb3d-3f03-44a6-b638-b84b04ccb67c": {
+      "entity_id": "92b6fb3d-3f03-44a6-b638-b84b04ccb67c",
+      "name": "빈대",
+      "entity_type": "CONCEPT",
+      "description": "A pest that the narrator dislikes and is concerned about.",
+      "attributes": {},
+      "source_chunks": [
+        "8c8de878-3d27-49d6-9bdd-e22f3edf3e3d"
+      ]
+    },
+    "63363855-45cc-4140-9fe3-9cb8edafc780": {
+      "entity_id": "63363855-45cc-4140-9fe3-9cb8edafc780",
+      "name": "인간 사회",
+      "entity_type": "CONCEPT",
+      "description": "The human society that the narrator feels uncomfortable with.",
+      "attributes": {},
+      "source_chunks": [
+        "8c8de878-3d27-49d6-9bdd-e22f3edf3e3d"
+      ]
+    },
+    "3f075093-e94e-47fd-bb76-7c804736484c": {
+      "entity_id": "3f075093-e94e-47fd-bb76-7c804736484c",
+      "name": "18 가구",
+      "entity_type": "OTHER",
+      "description": "A reference to the community or neighborhood where the narrator lives.",
+      "attributes": {},
+      "source_chunks": [
+        "323b2b4e-8821-4dc3-94f5-cdf3d5948f76"
+      ]
+    },
+    "731a6ef8-5c46-4b12-9d9b-4a0381077691": {
+      "entity_id": "731a6ef8-5c46-4b12-9d9b-4a0381077691",
+      "name": "은화",
+      "entity_type": "CONCEPT",
+      "description": "A type of currency mentioned in the context of the narrator's transactions. Silver coins mentioned in the text Silver coins that the narrator collects and contemplates.",
+      "attributes": {},
+      "source_chunks": [
+        "323b2b4e-8821-4dc3-94f5-cdf3d5948f76",
+        "bb6c0972-b95b-4a25-8a6c-7b9fdcd33726",
+        "7c133a09-d601-41ba-a0f8-23e61e339be4"
+      ]
+    },
+    "7909f3a7-a56f-453d-ade5-768cf2e97673": {
+      "entity_id": "7909f3a7-a56f-453d-ade5-768cf2e97673",
+      "name": "벙어리",
+      "entity_type": "OTHER",
+      "description": "A safe-like object given to the narrator by his wife to store money. A container or object where the silver coins are kept",
+      "attributes": {},
+      "source_chunks": [
+        "323b2b4e-8821-4dc3-94f5-cdf3d5948f76",
+        "7c133a09-d601-41ba-a0f8-23e61e339be4"
+      ]
+    },
+    "583785b4-f6ca-453e-bca9-21eea6eda58f": {
+      "entity_id": "583785b4-f6ca-453e-bca9-21eea6eda58f",
+      "name": "내객",
+      "entity_type": "PERSON",
+      "description": "Guests visiting the narrator's home. Unidentified guests who leave money behind. A guest of the narrator's wife, involved in the exchange of money.",
+      "attributes": {},
+      "source_chunks": [
+        "bb6c0972-b95b-4a25-8a6c-7b9fdcd33726",
+        "e4901f7a-c6a5-4423-85bc-7104193c9ca9",
+        "002aeec1-9097-40a5-bb2d-a90b837eea3b"
+      ]
+    },
+    "3a9c6b55-426a-4e2c-a067-dde2410ab505": {
+      "entity_id": "3a9c6b55-426a-4e2c-a067-dde2410ab505",
+      "name": "밥",
+      "entity_type": "CONCEPT",
+      "description": "Food prepared by the narrator's wife.",
+      "attributes": {},
+      "source_chunks": [
+        "e4901f7a-c6a5-4423-85bc-7104193c9ca9"
+      ]
+    },
+    "b328c05a-f136-4582-8add-72cca2f18844": {
+      "entity_id": "b328c05a-f136-4582-8add-72cca2f18844",
+      "name": "우리집",
+      "entity_type": "PLACE",
+      "description": "The home of the narrator and his wife.",
+      "attributes": {},
+      "source_chunks": [
+        "e4901f7a-c6a5-4423-85bc-7104193c9ca9"
+      ]
+    },
+    "a2a3d951-b25f-4ce3-bdb7-eb4b0029e5da": {
+      "entity_id": "a2a3d951-b25f-4ce3-bdb7-eb4b0029e5da",
+      "name": "지구",
+      "entity_type": "PLACE",
+      "description": "The Earth, where the narrator lives",
+      "attributes": {},
+      "source_chunks": [
+        "7c133a09-d601-41ba-a0f8-23e61e339be4"
+      ]
+    },
+    "b6230ea4-f25d-4015-9b2f-f045666e620b": {
+      "entity_id": "b6230ea4-f25d-4015-9b2f-f045666e620b",
+      "name": "거리",
+      "entity_type": "PLACE",
+      "description": "The street where the narrator wanders. The street where the narrator is walking.",
+      "attributes": {},
+      "source_chunks": [
+        "a5bfdcea-cb45-4bba-a6f8-0deda8490791",
+        "bb6c0972-b95b-4a25-8a6c-7b9fdcd33726"
+      ]
+    },
+    "7a38f5d1-2a76-4b5c-b275-43889e2d20f8": {
+      "entity_id": "7a38f5d1-2a76-4b5c-b275-43889e2d20f8",
+      "name": "아내 방",
+      "entity_type": "PLACE",
+      "description": "The wife's room, which the narrator must pass through to reach his own.",
+      "attributes": {},
+      "source_chunks": [
+        "bb6c0972-b95b-4a25-8a6c-7b9fdcd33726"
+      ]
+    },
+    "6992671f-e000-4c63-aba0-d534235c5b91": {
+      "entity_id": "6992671f-e000-4c63-aba0-d534235c5b91",
+      "name": "남자",
+      "entity_type": "PERSON",
+      "description": "A strange man appearing behind the narrator's wife A man who appears later in the narrative, interacting with the narrator's wife.",
+      "attributes": {},
+      "source_chunks": [
+        "086bd89b-3d2f-4f2d-9cd5-6f98a2b5973e",
+        "2b82d1b8-162b-49fb-a8c6-d36ade5cb0ea"
+      ]
+    },
+    "daa415a2-8033-4a6b-9ad6-f779719444be": {
+      "entity_id": "daa415a2-8033-4a6b-9ad6-f779719444be",
+      "name": "이불",
+      "entity_type": "OTHER",
+      "description": "A blanket used by the narrator",
+      "attributes": {},
+      "source_chunks": [
+        "2b82d1b8-162b-49fb-a8c6-d36ade5cb0ea"
+      ]
+    },
+    "c75d873e-8cd3-4470-9549-6bda3f6a9fd5": {
+      "entity_id": "c75d873e-8cd3-4470-9549-6bda3f6a9fd5",
+      "name": "고무신",
+      "entity_type": "OTHER",
+      "description": "Rubber shoes worn by the narrator's wife",
+      "attributes": {},
+      "source_chunks": [
+        "2b82d1b8-162b-49fb-a8c6-d36ade5cb0ea"
+      ]
+    },
+    "3cddaf56-c4d9-4916-9bae-60757aa46b86": {
+      "entity_id": "3cddaf56-c4d9-4916-9bae-60757aa46b86",
+      "name": "내",
+      "entity_type": "PERSON",
+      "description": "The narrator, who reflects on his feelings and experiences.",
+      "attributes": {},
+      "source_chunks": [
+        "4c4d4256-6aa9-4158-a75e-ea28cb500f6c"
+      ]
+    },
+    "f1587d89-a5a0-4a12-af51-595cbd4bef39": {
+      "entity_id": "f1587d89-a5a0-4a12-af51-595cbd4bef39",
+      "name": "내 이불",
+      "entity_type": "OTHER",
+      "description": "The narrator's blanket",
+      "attributes": {},
+      "source_chunks": [
+        "2e07d1c4-8469-40b6-a57a-873b564ef24a"
+      ]
+    },
+    "9aedd75d-a648-4008-b545-3e5f8b3b266e": {
+      "entity_id": "9aedd75d-a648-4008-b545-3e5f8b3b266e",
+      "name": "돈 오 원",
+      "entity_type": "CONCEPT",
+      "description": "A specific amount of money (five won) A currency unit mentioned in the text.",
+      "attributes": {},
+      "source_chunks": [
+        "28db10e7-bb55-403e-be21-220d7dff18d0",
+        "2e07d1c4-8469-40b6-a57a-873b564ef24a"
+      ]
+    },
+    "89e593f5-c8c5-4625-8e09-503c2868c15a": {
+      "entity_id": "89e593f5-c8c5-4625-8e09-503c2868c15a",
+      "name": "내객들",
+      "entity_type": "OTHER",
+      "description": "The narrator's guests",
+      "attributes": {},
+      "source_chunks": [
+        "2e07d1c4-8469-40b6-a57a-873b564ef24a"
+      ]
+    },
+    "8ccb1093-4595-4397-bdab-cde3ae686a9f": {
+      "entity_id": "8ccb1093-4595-4397-bdab-cde3ae686a9f",
+      "name": "경성역",
+      "entity_type": "PLACE",
+      "description": "A train station mentioned in the text. A train station where the narrator spends time. A train station in Korea, mentioned as a destination.",
+      "attributes": {},
+      "source_chunks": [
+        "182270ba-c6db-49a8-b40b-b29de4fc6d40",
+        "581d895c-d56d-4131-96b1-5f3bd733a7df",
+        "28db10e7-bb55-403e-be21-220d7dff18d0"
+      ]
+    },
+    "ca316b3a-ca65-41b4-9afb-cc61842f441f": {
+      "entity_id": "ca316b3a-ca65-41b4-9afb-cc61842f441f",
+      "name": "자정",
+      "entity_type": "CONCEPT",
+      "description": "Midnight, a time reference in the text.",
+      "attributes": {},
+      "source_chunks": [
+        "28db10e7-bb55-403e-be21-220d7dff18d0"
+      ]
+    },
+    "b3c581ef-22a3-4242-9dba-db2bd18869aa": {
+      "entity_id": "b3c581ef-22a3-4242-9dba-db2bd18869aa",
+      "name": "나",
+      "entity_type": "PERSON",
+      "description": "The narrator, who is experiencing hunger and anxiety.",
+      "attributes": {},
+      "source_chunks": [
+        "1c59ed7f-e597-45e4-a6b0-77b1ba97744a"
+      ]
+    },
+    "a7fe4e51-be46-498c-a512-4d68387feb39": {
+      "entity_id": "a7fe4e51-be46-498c-a512-4d68387feb39",
+      "name": "저녁 밥상",
+      "entity_type": "OTHER",
+      "description": "The dinner table set up in the wife's room.",
+      "attributes": {},
+      "source_chunks": [
+        "1c59ed7f-e597-45e4-a6b0-77b1ba97744a"
+      ]
+    },
+    "b846a23b-7c1b-4cdf-980b-954e27689689": {
+      "entity_id": "b846a23b-7c1b-4cdf-980b-954e27689689",
+      "name": "돈",
+      "entity_type": "CONCEPT",
+      "description": "Money, which the narrator desires but lacks. Money mentioned in the context of the narrator's actions.",
+      "attributes": {},
+      "source_chunks": [
+        "086bd89b-3d2f-4f2d-9cd5-6f98a2b5973e",
+        "1c59ed7f-e597-45e4-a6b0-77b1ba97744a"
+      ]
+    },
+    "09b338e5-ad6a-46ee-8416-ae7f569485c9": {
+      "entity_id": "09b338e5-ad6a-46ee-8416-ae7f569485c9",
+      "name": "벼락",
+      "entity_type": "CONCEPT",
+      "description": "Lightning, which the narrator is waiting for as a metaphor for disaster.",
+      "attributes": {},
+      "source_chunks": [
+        "1c59ed7f-e597-45e4-a6b0-77b1ba97744a"
+      ]
+    },
+    "e4c1ac14-b049-45b2-9f4e-4553f0419820": {
+      "entity_id": "e4c1ac14-b049-45b2-9f4e-4553f0419820",
+      "name": "티이루움",
+      "entity_type": "PLACE",
+      "description": "A specific area within the 경성역 where the narrator goes.",
+      "attributes": {},
+      "source_chunks": [
+        "182270ba-c6db-49a8-b40b-b29de4fc6d40"
+      ]
+    },
+    "083561a4-d43b-43da-ba92-16966364985b": {
+      "entity_id": "083561a4-d43b-43da-ba92-16966364985b",
+      "name": "커피",
+      "entity_type": "CONCEPT",
+      "description": "A beverage that the narrator enjoys.",
+      "attributes": {},
+      "source_chunks": [
+        "182270ba-c6db-49a8-b40b-b29de4fc6d40"
+      ]
+    },
+    "8de309cb-ec10-47ea-9b87-51cbee5a2188": {
+      "entity_id": "8de309cb-ec10-47ea-9b87-51cbee5a2188",
+      "name": "모오짜르트",
+      "entity_type": "PERSON",
+      "description": "A reference to the composer Wolfgang Amadeus Mozart.",
+      "attributes": {},
+      "source_chunks": [
+        "a5bfdcea-cb45-4bba-a6f8-0deda8490791"
+      ]
+    },
+    "568442d6-d536-4a9a-970f-c319bb7ac2e9": {
+      "entity_id": "568442d6-d536-4a9a-970f-c319bb7ac2e9",
+      "name": "집",
+      "entity_type": "PLACE",
+      "description": "The narrator's home.",
+      "attributes": {},
+      "source_chunks": [
+        "a5bfdcea-cb45-4bba-a6f8-0deda8490791"
+      ]
+    },
+    "19537d9e-64e1-4f48-8142-93bcf30646d2": {
+      "entity_id": "19537d9e-64e1-4f48-8142-93bcf30646d2",
+      "name": "비",
+      "entity_type": "CONCEPT",
+      "description": "Rain, which affects the narrator's experience.",
+      "attributes": {},
+      "source_chunks": [
+        "a5bfdcea-cb45-4bba-a6f8-0deda8490791"
+      ]
+    },
+    "a596cf80-097c-4899-8836-6cb94ca342f4": {
+      "entity_id": "a596cf80-097c-4899-8836-6cb94ca342f4",
+      "name": "골덴 옷",
+      "entity_type": "OTHER",
+      "description": "The narrator's clothing, made of corduroy.",
+      "attributes": {},
+      "source_chunks": [
+        "a5bfdcea-cb45-4bba-a6f8-0deda8490791"
+      ]
+    },
+    "02225b44-6ddf-4895-af93-684a49ae1555": {
+      "entity_id": "02225b44-6ddf-4895-af93-684a49ae1555",
+      "name": "감기",
+      "entity_type": "CONCEPT",
+      "description": "The cold that the narrator is suffering from.",
+      "attributes": {},
+      "source_chunks": [
+        "bc61c03b-410e-4190-8f56-30ec50769530"
+      ]
+    },
+    "a97bf396-51da-4db2-ab62-06299d4f061a": {
+      "entity_id": "a97bf396-51da-4db2-ab62-06299d4f061a",
+      "name": "아스피린",
+      "entity_type": "CONCEPT",
+      "description": "The medication that the narrator suspects he is taking. A common pain reliever that the narrator mistakenly took A common medication used for pain relief. A medication mentioned in the context of a misunderstanding",
+      "attributes": {},
+      "source_chunks": [
+        "11a84ce7-b308-477f-8c48-8b9abd7c62c8",
+        "33c9d99a-46e5-4b91-b2da-3227d703ff45",
+        "bc61c03b-410e-4190-8f56-30ec50769530",
+        "efb2ad18-9631-4fce-86f1-e15cce27c15a"
+      ]
+    },
+    "a55b20d7-dc4a-40ca-ab0b-653a813b0869": {
+      "entity_id": "a55b20d7-dc4a-40ca-ab0b-653a813b0869",
+      "name": "연심",
+      "entity_type": "PERSON",
+      "description": "The name of the narrator's wife, mentioned in thought",
+      "attributes": {},
+      "source_chunks": [
+        "11a84ce7-b308-477f-8c48-8b9abd7c62c8"
+      ]
+    },
+    "b9b7c608-3593-4e5f-814b-e1ebbdd460ed": {
+      "entity_id": "b9b7c608-3593-4e5f-814b-e1ebbdd460ed",
+      "name": "최면약 아달린갑",
+      "entity_type": "CONCEPT",
+      "description": "A type of hypnotic drug mentioned in the text",
+      "attributes": {},
+      "source_chunks": [
+        "11a84ce7-b308-477f-8c48-8b9abd7c62c8"
+      ]
+    },
+    "fbd719a2-827a-4f5c-9a28-7cdae0cf0934": {
+      "entity_id": "fbd719a2-827a-4f5c-9a28-7cdae0cf0934",
+      "name": "이웃",
+      "entity_type": "OTHER",
+      "description": "Refers to the neighbor involved in an incident",
+      "attributes": {},
+      "source_chunks": [
+        "11a84ce7-b308-477f-8c48-8b9abd7c62c8"
+      ]
+    },
+    "7e5c48c2-e7dc-4a31-a77e-7a83c2381c05": {
+      "entity_id": "7e5c48c2-e7dc-4a31-a77e-7a83c2381c05",
+      "name": "산",
+      "entity_type": "PLACE",
+      "description": "The location the narrator decides to go to",
+      "attributes": {},
+      "source_chunks": [
+        "11a84ce7-b308-477f-8c48-8b9abd7c62c8"
+      ]
+    },
+    "5d3a14ef-72b4-4454-b175-4102d28cece8": {
+      "entity_id": "5d3a14ef-72b4-4454-b175-4102d28cece8",
+      "name": "아달린",
+      "entity_type": "CONCEPT",
+      "description": "A medication that the narrator's wife used to deceive him. Another medication mentioned in the context of a misunderstanding",
+      "attributes": {},
+      "source_chunks": [
+        "efb2ad18-9631-4fce-86f1-e15cce27c15a",
+        "33c9d99a-46e5-4b91-b2da-3227d703ff45"
+      ]
+    },
+    "f17c9ffb-0aeb-4038-81cc-f4ece90a4f0f": {
+      "entity_id": "f17c9ffb-0aeb-4038-81cc-f4ece90a4f0f",
+      "name": "마르크",
+      "entity_type": "PERSON",
+      "description": "A name mentioned in the context of the narrator's thoughts.",
+      "attributes": {},
+      "source_chunks": [
+        "efb2ad18-9631-4fce-86f1-e15cce27c15a"
+      ]
+    },
+    "e37af667-de43-45bb-91cf-ca38bbab134d": {
+      "entity_id": "e37af667-de43-45bb-91cf-ca38bbab134d",
+      "name": "말사스",
+      "entity_type": "PERSON",
+      "description": "Another name mentioned in the context of the narrator's thoughts.",
+      "attributes": {},
+      "source_chunks": [
+        "efb2ad18-9631-4fce-86f1-e15cce27c15a"
+      ]
+    },
+    "9e72ee7c-c6f1-4e94-9462-95a6c957777d": {
+      "entity_id": "9e72ee7c-c6f1-4e94-9462-95a6c957777d",
+      "name": "마도로스",
+      "entity_type": "PERSON",
+      "description": "Yet another name mentioned in the context of the narrator's thoughts.",
+      "attributes": {},
+      "source_chunks": [
+        "efb2ad18-9631-4fce-86f1-e15cce27c15a"
+      ]
+    },
+    "2e22a7df-4bbc-4f03-967c-6cde04955016": {
+      "entity_id": "2e22a7df-4bbc-4f03-967c-6cde04955016",
+      "name": "미쓰꼬시",
+      "entity_type": "PLACE",
+      "description": "A location where the narrator finds themselves on the rooftop.",
+      "attributes": {},
+      "source_chunks": [
+        "581d895c-d56d-4131-96b1-5f3bd733a7df"
+      ]
+    },
+    "98de6e60-2262-40cf-8b01-358b991e8637": {
+      "entity_id": "98de6e60-2262-40cf-8b01-358b991e8637",
+      "name": "금붕어",
+      "entity_type": "OTHER",
+      "description": "Goldfish observed by the narrator.",
+      "attributes": {},
+      "source_chunks": [
+        "581d895c-d56d-4131-96b1-5f3bd733a7df"
+      ]
+    },
+    "b27ac91a-86ed-419f-a00e-6ea57d863273": {
+      "entity_id": "b27ac91a-86ed-419f-a00e-6ea57d863273",
+      "name": "오탁의 거리",
+      "entity_type": "PLACE",
+      "description": "A street that the narrator looks down upon.",
+      "attributes": {},
+      "source_chunks": [
+        "581d895c-d56d-4131-96b1-5f3bd733a7df"
+      ]
+    },
+    "498bde42-03e3-4bec-89f3-ed7089f4541b": {
+      "entity_id": "498bde42-03e3-4bec-89f3-ed7089f4541b",
+      "name": "스물 여섯 해",
+      "entity_type": "CONCEPT",
+      "description": "The age of the narrator, reflecting on their life.",
+      "attributes": {},
+      "source_chunks": [
+        "581d895c-d56d-4131-96b1-5f3bd733a7df"
+      ]
+    },
+    "a333e3ce-2e99-4152-9b5d-a04c84c4b042": {
+      "entity_id": "a333e3ce-2e99-4152-9b5d-a04c84c4b042",
+      "name": "정오",
+      "entity_type": "EVENT",
+      "description": "The time when a siren sounded",
+      "attributes": {},
+      "source_chunks": [
+        "33c9d99a-46e5-4b91-b2da-3227d703ff45"
+      ]
+    },
+    "4de206df-15e8-435d-aab4-2e58601f1c89": {
+      "entity_id": "4de206df-15e8-435d-aab4-2e58601f1c89",
+      "name": "날개",
+      "entity_type": "CONCEPT",
+      "description": "Symbolic representation of hope and ambition",
+      "attributes": {},
+      "source_chunks": [
+        "33c9d99a-46e5-4b91-b2da-3227d703ff45"
+      ]
+    }
+  },
+  "relationships": [
+    {
+      "relationship_id": "80fa0d17-0623-439f-b366-3ef1c93ec193",
+      "source_entity_id": "1d878690-ba70-4b8a-9959-aff188cead26",
+      "target_entity_id": "8f576021-b46e-457c-bce6-5eeab8e601a1",
+      "relationship_type": "RELATED_TO",
+      "description": "Dostoevsky's works are associated with the 19th century.",
+      "weight": 1.0,
+      "source_chunks": [
+        "c32b1568-bf9e-4228-90b7-144b686baceb"
+      ]
+    },
+    {
+      "relationship_id": "11387f1f-0afe-4ec9-8f00-e07064cb92e8",
+      "source_entity_id": "c9421bbd-7dd3-442a-bae6-179d1c0835f0",
+      "target_entity_id": "b504a3c0-8d41-44af-81e9-75c8179d1b96",
+      "relationship_type": "LOCATED_IN",
+      "description": "Victor Hugo is a notable figure from France.",
+      "weight": 1.0,
+      "source_chunks": [
+        "c32b1568-bf9e-4228-90b7-144b686baceb"
+      ]
+    },
+    {
+      "relationship_id": "798b7d8b-da1a-43e9-b6c3-0166249536e6",
+      "source_entity_id": "e15f0034-c2bd-403f-998c-ed2fb2013ff5",
+      "target_entity_id": "d7a46f8b-97bc-4cc9-b246-770fee8676e5",
+      "relationship_type": "RELATED_TO",
+      "description": "Both are references to women in the context of societal roles.",
+      "weight": 1.0,
+      "source_chunks": [
+        "665d757e-5014-4182-a1a2-43659a56fc76"
+      ]
+    },
+    {
+      "relationship_id": "b355d10b-dd50-4ff5-9638-e27775e5dfb8",
+      "source_entity_id": "15fb78be-8971-4294-be2c-58605386eb20",
+      "target_entity_id": "8d58bfa4-8383-4f5b-829f-1290d1baaa3c",
+      "relationship_type": "LOCATED_IN",
+      "description": "The 18 households are located at 33번지.",
+      "weight": 1.0,
+      "source_chunks": [
+        "665d757e-5014-4182-a1a2-43659a56fc76"
+      ]
+    },
+    {
+      "relationship_id": "9045c5fb-4201-4971-bc00-c44938d661b0",
+      "source_entity_id": "e9cf3056-46f9-4810-980e-94e901ba777e",
+      "target_entity_id": "8d58bfa4-8383-4f5b-829f-1290d1baaa3c",
+      "relationship_type": "PART_OF",
+      "description": "The main gate is part of the 18 households.",
+      "weight": 1.0,
+      "source_chunks": [
+        "665d757e-5014-4182-a1a2-43659a56fc76"
+      ]
+    },
+    {
+      "relationship_id": "516fcbe9-ad96-4884-b63e-cb436c33f1e5",
+      "source_entity_id": "cb3ce785-2216-42ce-98e3-af54079f1a59",
+      "target_entity_id": "e9cf3056-46f9-4810-980e-94e901ba777e",
+      "relationship_type": "WORKS_FOR",
+      "description": "Merchants enter and exit through the main gate.",
+      "weight": 1.0,
+      "source_chunks": [
+        "665d757e-5014-4182-a1a2-43659a56fc76"
+      ]
+    },
+    {
+      "relationship_id": "1d65e32e-ef91-4774-ad1f-300874be2a3f",
+      "source_entity_id": "765aa0a3-93b5-4cbe-b8b6-beecb3f9911e",
+      "target_entity_id": "828b6e57-f871-4031-b590-b1bb30eaa2e3",
+      "relationship_type": "LOCATED_IN",
+      "description": "The narrator's wife lives in the location described.",
+      "weight": 1.0,
+      "source_chunks": [
+        "d7bf4d2d-2cb0-402e-addf-b2859a1bee6c"
+      ]
+    },
+    {
+      "relationship_id": "328def0a-34be-46c6-8103-4a2781957363",
+      "source_entity_id": "765aa0a3-93b5-4cbe-b8b6-beecb3f9911e",
+      "target_entity_id": "8419617b-05fe-4312-8133-1c647cc8deba",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator compares his wife to a beautiful flower.",
+      "weight": 1.0,
+      "source_chunks": [
+        "d7bf4d2d-2cb0-402e-addf-b2859a1bee6c"
+      ]
+    },
+    {
+      "relationship_id": "7e64f51f-f224-42d2-9138-68dd76f86afc",
+      "source_entity_id": "c7eb9f15-5032-4478-9756-d971920cc15b",
+      "target_entity_id": "765aa0a3-93b5-4cbe-b8b6-beecb3f9911e",
+      "relationship_type": "PART_OF",
+      "description": "The room is a space where the narrator's wife is present.",
+      "weight": 1.0,
+      "source_chunks": [
+        "d7bf4d2d-2cb0-402e-addf-b2859a1bee6c"
+      ]
+    },
+    {
+      "relationship_id": "103b7eab-8a46-4187-ae90-6ae5407f71ec",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "relationship_type": "LOCATED_IN",
+      "description": "The narrator's wife is associated with the living space.",
+      "weight": 1.0,
+      "source_chunks": [
+        "f77df291-bbfe-42f3-adb5-461dff321850"
+      ]
+    },
+    {
+      "relationship_id": "9bad1559-97b5-4ad0-8127-decc7c1dbdf4",
+      "source_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "target_entity_id": "75cea673-e971-4f14-b6e1-4026be99b76c",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator's room is related to the room below it.",
+      "weight": 1.0,
+      "source_chunks": [
+        "f77df291-bbfe-42f3-adb5-461dff321850"
+      ]
+    },
+    {
+      "relationship_id": "57be8f75-bb68-4b87-b70f-ef788fd13199",
+      "source_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "target_entity_id": "fb319477-22b7-4a7d-b54a-bfda1a2bad50",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator's room is related to the room above it.",
+      "weight": 1.0,
+      "source_chunks": [
+        "f77df291-bbfe-42f3-adb5-461dff321850"
+      ]
+    },
+    {
+      "relationship_id": "647ff383-fc5f-4942-90b1-fc459c808448",
+      "source_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "target_entity_id": "b04518ac-cb47-41fb-96b0-236af0d3ca6f",
+      "relationship_type": "HAS_FEATURE",
+      "description": "The narrator's room has a window that opens to the east.",
+      "weight": 1.0,
+      "source_chunks": [
+        "f77df291-bbfe-42f3-adb5-461dff321850"
+      ]
+    },
+    {
+      "relationship_id": "13c760a2-e5fb-4cc2-a721-c601c95c0fa5",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "f4e545c5-89c2-4373-a8d3-9b7bdf060ebd",
+      "relationship_type": "USES",
+      "description": "The narrator's wife uses the mirror for personal grooming.",
+      "weight": 1.0,
+      "source_chunks": [
+        "f77df291-bbfe-42f3-adb5-461dff321850"
+      ]
+    },
+    {
+      "relationship_id": "bb5e2bad-8022-4142-aa97-d416b8b3f42a",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "68e2975d-a056-4e9d-ba73-7a6c69fbe734",
+      "relationship_type": "USES",
+      "description": "The narrator's wife uses the tool mentioned for playful activities.",
+      "weight": 1.0,
+      "source_chunks": [
+        "f77df291-bbfe-42f3-adb5-461dff321850"
+      ]
+    },
+    {
+      "relationship_id": "6b347502-47a7-474a-9df7-a833ead6e25c",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "e41be569-aad0-4b59-8f5c-dbd7df2032f4",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator's wife is associated with various cosmetics.",
+      "weight": 1.0,
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    {
+      "relationship_id": "8d16a24a-9ddc-491d-8367-a8ad98aa5313",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "918ebd00-8734-4be0-8a63-4712b6c1ad08",
+      "relationship_type": "RELATED_TO",
+      "description": "The scent is a fragment of the narrator's wife's body scent.",
+      "weight": 1.0,
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    {
+      "relationship_id": "9ccfee3c-99b9-4510-bd7f-adf16b993eac",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "c7eb9f15-5032-4478-9756-d971920cc15b",
+      "relationship_type": "LOCATED_IN",
+      "description": "The wife's room is described as luxurious.",
+      "weight": 1.0,
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    {
+      "relationship_id": "c4a455c9-fa74-45b8-a934-98462508d68f",
+      "source_entity_id": "c7eb9f15-5032-4478-9756-d971920cc15b",
+      "target_entity_id": "80cc7cc4-043e-4e76-a2c9-c6cb5d290d3a",
+      "relationship_type": "PART_OF",
+      "description": "The skirts are hung in the wife's room.",
+      "weight": 1.0,
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    {
+      "relationship_id": "60deefda-f0aa-4d58-b2e1-3b6e1c820c0a",
+      "source_entity_id": "b4dc6c16-20ff-47ca-9bc1-71dc40981968",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "WORKS_FOR",
+      "description": "The narrator's corduroy suit is the only clothing he has, which contrasts with his wife's clothing.",
+      "weight": 1.0,
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    {
+      "relationship_id": "35008877-fd5d-4536-8ffd-158e1ff9e62b",
+      "source_entity_id": "b8f9ac52-7e23-45f1-ab6a-78a458660fa8",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "WORKS_FOR",
+      "description": "The narrator's high-neck sweater is part of his limited clothing.",
+      "weight": 1.0,
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    {
+      "relationship_id": "75e4762d-6e81-49de-a39e-817acac672e4",
+      "source_entity_id": "b59e3774-aff5-4629-a2df-d8cd43fdc052",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "RELATED_TO",
+      "description": "The sunlight is mentioned in the context of the wife's absence.",
+      "weight": 1.0,
+      "source_chunks": [
+        "32017cae-682c-4be8-a2b5-3439f022ff84"
+      ]
+    },
+    {
+      "relationship_id": "4e3616b9-7952-46f9-936f-535f42f42177",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "relationship_type": "LOCATED_IN",
+      "description": "The narrator's wife is expected to return to the narrator's room.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8c8de878-3d27-49d6-9bdd-e22f3edf3e3d"
+      ]
+    },
+    {
+      "relationship_id": "8b406d96-1579-4116-ae5f-647db40a3ee8",
+      "source_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "target_entity_id": "92b6fb3d-3f03-44a6-b638-b84b04ccb67c",
+      "relationship_type": "CONTAINS",
+      "description": "The narrator's room contains bedbugs.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8c8de878-3d27-49d6-9bdd-e22f3edf3e3d"
+      ]
+    },
+    {
+      "relationship_id": "a40d77db-51bf-4ddd-839a-2970464e7963",
+      "source_entity_id": "92b6fb3d-3f03-44a6-b638-b84b04ccb67c",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator's concern about bedbugs is related to his wife.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8c8de878-3d27-49d6-9bdd-e22f3edf3e3d"
+      ]
+    },
+    {
+      "relationship_id": "b6426ec7-7c26-4c12-b9ed-926a8e17655d",
+      "source_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "target_entity_id": "63363855-45cc-4140-9fe3-9cb8edafc780",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator's feelings about his room are related to his feelings about human society.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8c8de878-3d27-49d6-9bdd-e22f3edf3e3d"
+      ]
+    },
+    {
+      "relationship_id": "a3c258a1-105d-43be-b8d5-d3b5c7a10eec",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "3f075093-e94e-47fd-bb76-7c804736484c",
+      "relationship_type": "RELATED_TO",
+      "description": "The wife interacts with the community of 18 households.",
+      "weight": 1.0,
+      "source_chunks": [
+        "323b2b4e-8821-4dc3-94f5-cdf3d5948f76"
+      ]
+    },
+    {
+      "relationship_id": "81b51e59-e02d-4414-9245-29dbb517c2b5",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "731a6ef8-5c46-4b12-9d9b-4a0381077691",
+      "relationship_type": "GIVES",
+      "description": "The wife gives the narrator coins (은화) on certain occasions.",
+      "weight": 1.0,
+      "source_chunks": [
+        "323b2b4e-8821-4dc3-94f5-cdf3d5948f76"
+      ]
+    },
+    {
+      "relationship_id": "13c1fc93-b98a-4bac-9344-93363277dae3",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "7909f3a7-a56f-453d-ade5-768cf2e97673",
+      "relationship_type": "CREATED_BY",
+      "description": "The wife buys a safe-like object (벙어리) for the narrator.",
+      "weight": 1.0,
+      "source_chunks": [
+        "323b2b4e-8821-4dc3-94f5-cdf3d5948f76"
+      ]
+    },
+    {
+      "relationship_id": "ad5722c2-5465-49e6-a794-9ca5d905c395",
+      "source_entity_id": "7909f3a7-a56f-453d-ade5-768cf2e97673",
+      "target_entity_id": "731a6ef8-5c46-4b12-9d9b-4a0381077691",
+      "relationship_type": "CONTAINS",
+      "description": "The narrator stores coins (은화) in the safe-like object (벙어리).",
+      "weight": 1.0,
+      "source_chunks": [
+        "323b2b4e-8821-4dc3-94f5-cdf3d5948f76"
+      ]
+    },
+    {
+      "relationship_id": "c2382987-1798-4f3d-afba-e3a177cb938f",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "583785b4-f6ca-453e-bca9-21eea6eda58f",
+      "relationship_type": "KNOWS",
+      "description": "The wife has guests visiting.",
+      "weight": 1.0,
+      "source_chunks": [
+        "e4901f7a-c6a5-4423-85bc-7104193c9ca9"
+      ]
+    },
+    {
+      "relationship_id": "36ff0f28-91ed-48f0-94ad-1bf6db2f3526",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "3a9c6b55-426a-4e2c-a067-dde2410ab505",
+      "relationship_type": "CREATED_BY",
+      "description": "The wife prepares the meals.",
+      "weight": 1.0,
+      "source_chunks": [
+        "e4901f7a-c6a5-4423-85bc-7104193c9ca9"
+      ]
+    },
+    {
+      "relationship_id": "22fdfe20-b11f-4a37-8ffc-b1b39e6dd03c",
+      "source_entity_id": "583785b4-f6ca-453e-bca9-21eea6eda58f",
+      "target_entity_id": "b328c05a-f136-4582-8add-72cca2f18844",
+      "relationship_type": "LOCATED_IN",
+      "description": "The guests are located in the narrator's home.",
+      "weight": 1.0,
+      "source_chunks": [
+        "e4901f7a-c6a5-4423-85bc-7104193c9ca9"
+      ]
+    },
+    {
+      "relationship_id": "66aa360e-ac71-46c0-a5a6-a354ccb0bba5",
+      "source_entity_id": "b328c05a-f136-4582-8add-72cca2f18844",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "PART_OF",
+      "description": "The wife is part of the narrator's home.",
+      "weight": 1.0,
+      "source_chunks": [
+        "e4901f7a-c6a5-4423-85bc-7104193c9ca9"
+      ]
+    },
+    {
+      "relationship_id": "150620bb-6aec-4185-8b4a-e8bc264944db",
+      "source_entity_id": "b328c05a-f136-4582-8add-72cca2f18844",
+      "target_entity_id": "583785b4-f6ca-453e-bca9-21eea6eda58f",
+      "relationship_type": "PART_OF",
+      "description": "The guests are part of the narrator's home.",
+      "weight": 1.0,
+      "source_chunks": [
+        "e4901f7a-c6a5-4423-85bc-7104193c9ca9"
+      ]
+    },
+    {
+      "relationship_id": "d0a91f1a-b4f8-4312-b1b1-a1644267861c",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "583785b4-f6ca-453e-bca9-21eea6eda58f",
+      "relationship_type": "RELATED_TO",
+      "description": "The wife is connected to the guests who leave money.",
+      "weight": 1.0,
+      "source_chunks": [
+        "002aeec1-9097-40a5-bb2d-a90b837eea3b"
+      ]
+    },
+    {
+      "relationship_id": "6cfe02f3-5e52-4543-8970-df12cacbdb08",
+      "source_entity_id": "583785b4-f6ca-453e-bca9-21eea6eda58f",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "GIVES",
+      "description": "The guests leave money for the wife.",
+      "weight": 1.0,
+      "source_chunks": [
+        "002aeec1-9097-40a5-bb2d-a90b837eea3b"
+      ]
+    },
+    {
+      "relationship_id": "f5e524cb-245a-4876-82e0-951f5e8d9691",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "731a6ef8-5c46-4b12-9d9b-4a0381077691",
+      "relationship_type": "CREATED_BY",
+      "description": "The wife leaves silver coins for the narrator",
+      "weight": 1.0,
+      "source_chunks": [
+        "7c133a09-d601-41ba-a0f8-23e61e339be4"
+      ]
+    },
+    {
+      "relationship_id": "8d3645dd-cd96-4253-aa18-58613a917b9e",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "7909f3a7-a56f-453d-ade5-768cf2e97673",
+      "relationship_type": "USES",
+      "description": "The wife uses the container to keep the silver coins",
+      "weight": 1.0,
+      "source_chunks": [
+        "7c133a09-d601-41ba-a0f8-23e61e339be4"
+      ]
+    },
+    {
+      "relationship_id": "8915ec44-abab-4279-95b9-13e339ea289f",
+      "source_entity_id": "7909f3a7-a56f-453d-ade5-768cf2e97673",
+      "target_entity_id": "731a6ef8-5c46-4b12-9d9b-4a0381077691",
+      "relationship_type": "CONTAINS",
+      "description": "The container holds the silver coins",
+      "weight": 1.0,
+      "source_chunks": [
+        "7c133a09-d601-41ba-a0f8-23e61e339be4"
+      ]
+    },
+    {
+      "relationship_id": "39a91c5f-c651-4409-b987-a8ee286df97e",
+      "source_entity_id": "a2a3d951-b25f-4ce3-bdb7-eb4b0029e5da",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "LOCATED_IN",
+      "description": "The wife lives on Earth",
+      "weight": 1.0,
+      "source_chunks": [
+        "7c133a09-d601-41ba-a0f8-23e61e339be4"
+      ]
+    },
+    {
+      "relationship_id": "47688276-e3f9-4df0-b6ab-d8278e1f829d",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "583785b4-f6ca-453e-bca9-21eea6eda58f",
+      "relationship_type": "RELATED_TO",
+      "description": "The wife has a guest.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bb6c0972-b95b-4a25-8a6c-7b9fdcd33726"
+      ]
+    },
+    {
+      "relationship_id": "fb98561d-57c2-4b69-944d-82f34f75238e",
+      "source_entity_id": "583785b4-f6ca-453e-bca9-21eea6eda58f",
+      "target_entity_id": "731a6ef8-5c46-4b12-9d9b-4a0381077691",
+      "relationship_type": "GIVES",
+      "description": "The guest leaves money for the wife.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bb6c0972-b95b-4a25-8a6c-7b9fdcd33726"
+      ]
+    },
+    {
+      "relationship_id": "5551525e-025b-470b-8410-b488600aa7f0",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "731a6ef8-5c46-4b12-9d9b-4a0381077691",
+      "relationship_type": "RECEIVES",
+      "description": "The wife receives money from the guest.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bb6c0972-b95b-4a25-8a6c-7b9fdcd33726"
+      ]
+    },
+    {
+      "relationship_id": "daf02aaa-e8e2-45ac-ab5a-1ee95f63b6a2",
+      "source_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "target_entity_id": "7a38f5d1-2a76-4b5c-b275-43889e2d20f8",
+      "relationship_type": "PART_OF",
+      "description": "The narrator's room is accessed through the wife's room.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bb6c0972-b95b-4a25-8a6c-7b9fdcd33726"
+      ]
+    },
+    {
+      "relationship_id": "71072960-98e2-4a9b-8a82-fe59718e5f86",
+      "source_entity_id": "b6230ea4-f25d-4015-9b2f-f045666e620b",
+      "target_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "relationship_type": "LOCATED_IN",
+      "description": "The narrator wanders the street while trying to return to his room.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bb6c0972-b95b-4a25-8a6c-7b9fdcd33726"
+      ]
+    },
+    {
+      "relationship_id": "cddecc76-0ff8-4fee-b0aa-ddb271e909bf",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "6992671f-e000-4c63-aba0-d534235c5b91",
+      "relationship_type": "KNOWS",
+      "description": "The wife knows the strange man",
+      "weight": 1.0,
+      "source_chunks": [
+        "2b82d1b8-162b-49fb-a8c6-d36ade5cb0ea"
+      ]
+    },
+    {
+      "relationship_id": "74368981-db60-42e7-ba4c-27a0e654eb88",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "e9cf3056-46f9-4810-980e-94e901ba777e",
+      "relationship_type": "LOCATED_IN",
+      "description": "The wife walks towards the front gate",
+      "weight": 1.0,
+      "source_chunks": [
+        "2b82d1b8-162b-49fb-a8c6-d36ade5cb0ea"
+      ]
+    },
+    {
+      "relationship_id": "17a90355-9d0f-492a-890b-62ba1ed184fb",
+      "source_entity_id": "6992671f-e000-4c63-aba0-d534235c5b91",
+      "target_entity_id": "e9cf3056-46f9-4810-980e-94e901ba777e",
+      "relationship_type": "LOCATED_IN",
+      "description": "The strange man walks towards the front gate",
+      "weight": 1.0,
+      "source_chunks": [
+        "2b82d1b8-162b-49fb-a8c6-d36ade5cb0ea"
+      ]
+    },
+    {
+      "relationship_id": "8764200c-20b5-44ae-807a-8c375e5d2640",
+      "source_entity_id": "daa415a2-8033-4a6b-9ad6-f779719444be",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "USED_BY",
+      "description": "The narrator uses the blanket while lying down",
+      "weight": 1.0,
+      "source_chunks": [
+        "2b82d1b8-162b-49fb-a8c6-d36ade5cb0ea"
+      ]
+    },
+    {
+      "relationship_id": "ef5f946d-672b-4eb2-a2d5-702abb2389e8",
+      "source_entity_id": "c75d873e-8cd3-4470-9549-6bda3f6a9fd5",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "WORN_BY",
+      "description": "The rubber shoes are worn by the narrator's wife",
+      "weight": 1.0,
+      "source_chunks": [
+        "2b82d1b8-162b-49fb-a8c6-d36ade5cb0ea"
+      ]
+    },
+    {
+      "relationship_id": "03071d58-6174-4f7b-81c7-0bb73bcef525",
+      "source_entity_id": "3cddaf56-c4d9-4916-9bae-60757aa46b86",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "MARRIED_TO",
+      "description": "The narrator is married to his wife.",
+      "weight": 1.0,
+      "source_chunks": [
+        "4c4d4256-6aa9-4158-a75e-ea28cb500f6c"
+      ]
+    },
+    {
+      "relationship_id": "fb061542-078d-488a-b4f5-fbd8d5b4e785",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "3cddaf56-c4d9-4916-9bae-60757aa46b86",
+      "relationship_type": "RELATED_TO",
+      "description": "The wife has a relationship with the narrator.",
+      "weight": 1.0,
+      "source_chunks": [
+        "4c4d4256-6aa9-4158-a75e-ea28cb500f6c"
+      ]
+    },
+    {
+      "relationship_id": "37ca6875-6d8a-41e9-b3a4-0e89f511f659",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "15fb78be-8971-4294-be2c-58605386eb20",
+      "relationship_type": "LOCATED_IN",
+      "description": "The wife lives at 33번지",
+      "weight": 1.0,
+      "source_chunks": [
+        "7154c46c-66fd-423e-9331-614ef35ef80c"
+      ]
+    },
+    {
+      "relationship_id": "5ed4bcd6-06dd-4d80-ad30-60b559d54328",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "relationship_type": "LOCATED_IN",
+      "description": "The wife is associated with the narrator's room",
+      "weight": 1.0,
+      "source_chunks": [
+        "2e07d1c4-8469-40b6-a57a-873b564ef24a"
+      ]
+    },
+    {
+      "relationship_id": "1ae63d0d-6d06-46fe-80c5-a1da2db0f895",
+      "source_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "target_entity_id": "f1587d89-a5a0-4a12-af51-595cbd4bef39",
+      "relationship_type": "CONTAINS",
+      "description": "The narrator's room contains the narrator's blanket",
+      "weight": 1.0,
+      "source_chunks": [
+        "2e07d1c4-8469-40b6-a57a-873b564ef24a"
+      ]
+    },
+    {
+      "relationship_id": "1e3c324e-8ebc-4b02-9a2a-0a380064a159",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "9aedd75d-a648-4008-b545-3e5f8b3b266e",
+      "relationship_type": "GIVES",
+      "description": "The wife is given five won by the narrator",
+      "weight": 1.0,
+      "source_chunks": [
+        "2e07d1c4-8469-40b6-a57a-873b564ef24a"
+      ]
+    },
+    {
+      "relationship_id": "afaedf5d-73b0-4a8b-b7ec-adee04f95837",
+      "source_entity_id": "89e593f5-c8c5-4625-8e09-503c2868c15a",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "RELATED_TO",
+      "description": "The guests are related to the narrator's wife",
+      "weight": 1.0,
+      "source_chunks": [
+        "2e07d1c4-8469-40b6-a57a-873b564ef24a"
+      ]
+    },
+    {
+      "relationship_id": "a359ebc1-da83-438b-b68a-f28b633dd9e2",
+      "source_entity_id": "fc7e3d49-ee3d-4f2f-b40a-5d59493dd0e7",
+      "target_entity_id": "9aedd75d-a648-4008-b545-3e5f8b3b266e",
+      "relationship_type": "CONTAINS",
+      "description": "The narrator's room contains the five won",
+      "weight": 1.0,
+      "source_chunks": [
+        "2e07d1c4-8469-40b6-a57a-873b564ef24a"
+      ]
+    },
+    {
+      "relationship_id": "b8972b1f-99f8-445e-aa64-ac99db695347",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "9aedd75d-a648-4008-b545-3e5f8b3b266e",
+      "relationship_type": "GIVES",
+      "description": "The narrator gives the money to his wife.",
+      "weight": 1.0,
+      "source_chunks": [
+        "28db10e7-bb55-403e-be21-220d7dff18d0"
+      ]
+    },
+    {
+      "relationship_id": "03ef4628-88b5-4404-b6da-8afd2ada298d",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "ca316b3a-ca65-41b4-9afb-cc61842f441f",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator is concerned about returning home before midnight to avoid his wife's disapproval.",
+      "weight": 1.0,
+      "source_chunks": [
+        "28db10e7-bb55-403e-be21-220d7dff18d0"
+      ]
+    },
+    {
+      "relationship_id": "507de094-74dc-4b86-bd49-bc813a7fc7be",
+      "source_entity_id": "8ccb1093-4595-4397-bdab-cde3ae686a9f",
+      "target_entity_id": "ca316b3a-ca65-41b4-9afb-cc61842f441f",
+      "relationship_type": "INDICATES",
+      "description": "The clock at Kyungsung Station indicates that it is past midnight.",
+      "weight": 1.0,
+      "source_chunks": [
+        "28db10e7-bb55-403e-be21-220d7dff18d0"
+      ]
+    },
+    {
+      "relationship_id": "02b04fa2-9afe-40f8-ac58-8b6420cbbcd6",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "KNOWS",
+      "description": "The narrator's wife is aware of the narrator's actions.",
+      "weight": 1.0,
+      "source_chunks": [
+        "28db10e7-bb55-403e-be21-220d7dff18d0"
+      ]
+    },
+    {
+      "relationship_id": "2e4feecd-563a-4871-a18b-2b5e0fc8f7c8",
+      "source_entity_id": "b3c581ef-22a3-4242-9dba-db2bd18869aa",
+      "target_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "relationship_type": "MARRIED_TO",
+      "description": "The narrator is married to the wife.",
+      "weight": 1.0,
+      "source_chunks": [
+        "1c59ed7f-e597-45e4-a6b0-77b1ba97744a"
+      ]
+    },
+    {
+      "relationship_id": "b5270308-cf11-443f-ac9a-7c1d333c1afc",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "a7fe4e51-be46-498c-a512-4d68387feb39",
+      "relationship_type": "PREPARED",
+      "description": "The wife has prepared the dinner table.",
+      "weight": 1.0,
+      "source_chunks": [
+        "1c59ed7f-e597-45e4-a6b0-77b1ba97744a"
+      ]
+    },
+    {
+      "relationship_id": "e3eb8ec6-9401-4681-b94e-a7ccdb2088e2",
+      "source_entity_id": "b3c581ef-22a3-4242-9dba-db2bd18869aa",
+      "target_entity_id": "b846a23b-7c1b-4cdf-980b-954e27689689",
+      "relationship_type": "LACKS",
+      "description": "The narrator lacks money.",
+      "weight": 1.0,
+      "source_chunks": [
+        "1c59ed7f-e597-45e4-a6b0-77b1ba97744a"
+      ]
+    },
+    {
+      "relationship_id": "012490f8-7fe0-4deb-9c16-2af02049ef11",
+      "source_entity_id": "b3c581ef-22a3-4242-9dba-db2bd18869aa",
+      "target_entity_id": "09b338e5-ad6a-46ee-8416-ae7f569485c9",
+      "relationship_type": "WAITING_FOR",
+      "description": "The narrator is waiting for lightning as a metaphor for disaster.",
+      "weight": 1.0,
+      "source_chunks": [
+        "1c59ed7f-e597-45e4-a6b0-77b1ba97744a"
+      ]
+    },
+    {
+      "relationship_id": "47dc0be1-42bf-432d-96f9-8e376783a276",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "b3c581ef-22a3-4242-9dba-db2bd18869aa",
+      "relationship_type": "VISITS",
+      "description": "The wife visits the narrator's room.",
+      "weight": 1.0,
+      "source_chunks": [
+        "1c59ed7f-e597-45e4-a6b0-77b1ba97744a"
+      ]
+    },
+    {
+      "relationship_id": "f25f6ac3-1229-4c96-aff3-12fa42f83a58",
+      "source_entity_id": "8ccb1093-4595-4397-bdab-cde3ae686a9f",
+      "target_entity_id": "e4c1ac14-b049-45b2-9f4e-4553f0419820",
+      "relationship_type": "PART_OF",
+      "description": "티이루움 is a part of 경성역.",
+      "weight": 1.0,
+      "source_chunks": [
+        "182270ba-c6db-49a8-b40b-b29de4fc6d40"
+      ]
+    },
+    {
+      "relationship_id": "a1c4ba9c-1679-408f-8b5e-7d68db337040",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "568442d6-d536-4a9a-970f-c319bb7ac2e9",
+      "relationship_type": "LOCATED_IN",
+      "description": "The wife is located in the narrator's home.",
+      "weight": 1.0,
+      "source_chunks": [
+        "a5bfdcea-cb45-4bba-a6f8-0deda8490791"
+      ]
+    },
+    {
+      "relationship_id": "a371ee0d-8251-4f64-b7e9-d556a11f1d6c",
+      "source_entity_id": "19537d9e-64e1-4f48-8142-93bcf30646d2",
+      "target_entity_id": "b6230ea4-f25d-4015-9b2f-f045666e620b",
+      "relationship_type": "RELATED_TO",
+      "description": "The rain is affecting the street where the narrator is walking.",
+      "weight": 1.0,
+      "source_chunks": [
+        "a5bfdcea-cb45-4bba-a6f8-0deda8490791"
+      ]
+    },
+    {
+      "relationship_id": "06303ee3-4b54-4f67-8219-80b063554a66",
+      "source_entity_id": "a596cf80-097c-4899-8836-6cb94ca342f4",
+      "target_entity_id": "19537d9e-64e1-4f48-8142-93bcf30646d2",
+      "relationship_type": "RELATED_TO",
+      "description": "The corduroy clothing gets wet from the rain.",
+      "weight": 1.0,
+      "source_chunks": [
+        "a5bfdcea-cb45-4bba-a6f8-0deda8490791"
+      ]
+    },
+    {
+      "relationship_id": "d6caf624-b4ad-41bc-b329-4436396a9172",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "02225b44-6ddf-4895-af93-684a49ae1555",
+      "relationship_type": "CARES_FOR",
+      "description": "The wife cares for the narrator who has a cold.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bc61c03b-410e-4190-8f56-30ec50769530"
+      ]
+    },
+    {
+      "relationship_id": "03ee32c5-9f55-42e0-ad34-b3e6a77da2a6",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "a97bf396-51da-4db2-ab62-06299d4f061a",
+      "relationship_type": "GIVES",
+      "description": "The wife gives the narrator aspirin to help with his illness.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bc61c03b-410e-4190-8f56-30ec50769530"
+      ]
+    },
+    {
+      "relationship_id": "7bb594e0-55be-44b2-aeff-c28a8e29ce90",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "f4e545c5-89c2-4373-a8d3-9b7bdf060ebd",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator uses the mirror to check his appearance while his wife is out.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bc61c03b-410e-4190-8f56-30ec50769530"
+      ]
+    },
+    {
+      "relationship_id": "ea9415ac-046d-4c16-bd9a-b9a4554e4fa4",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "a55b20d7-dc4a-40ca-ab0b-653a813b0869",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator's wife is referred to by the name 연심",
+      "weight": 1.0,
+      "source_chunks": [
+        "11a84ce7-b308-477f-8c48-8b9abd7c62c8"
+      ]
+    },
+    {
+      "relationship_id": "e50bd12d-034f-4e4a-9654-a84f975fb56a",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "a97bf396-51da-4db2-ab62-06299d4f061a",
+      "relationship_type": "GAVE",
+      "description": "The wife gave the narrator aspirin",
+      "weight": 1.0,
+      "source_chunks": [
+        "11a84ce7-b308-477f-8c48-8b9abd7c62c8"
+      ]
+    },
+    {
+      "relationship_id": "6aff30a9-9492-44f3-b60f-a2894b4e9793",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "7e5c48c2-e7dc-4a31-a77e-7a83c2381c05",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator tries to avoid thinking about his wife while going to the mountain",
+      "weight": 1.0,
+      "source_chunks": [
+        "11a84ce7-b308-477f-8c48-8b9abd7c62c8"
+      ]
+    },
+    {
+      "relationship_id": "400f0899-dada-44e7-b6db-8de9b3b71c12",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "a97bf396-51da-4db2-ab62-06299d4f061a",
+      "relationship_type": "DECEIVED_BY",
+      "description": "The wife deceived the narrator by giving him 아달린 instead of 아스피린.",
+      "weight": 1.0,
+      "source_chunks": [
+        "efb2ad18-9631-4fce-86f1-e15cce27c15a"
+      ]
+    },
+    {
+      "relationship_id": "bab62235-13a2-4858-828a-02efc356b03b",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "5d3a14ef-72b4-4454-b175-4102d28cece8",
+      "relationship_type": "USED",
+      "description": "The wife used 아달린 to replace 아스피린.",
+      "weight": 1.0,
+      "source_chunks": [
+        "efb2ad18-9631-4fce-86f1-e15cce27c15a"
+      ]
+    },
+    {
+      "relationship_id": "d9986b18-462f-469d-b64d-2c69670adb7d",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "6992671f-e000-4c63-aba0-d534235c5b91",
+      "relationship_type": "RELATED_TO",
+      "description": "The wife is seen interacting with another man.",
+      "weight": 1.0,
+      "source_chunks": [
+        "086bd89b-3d2f-4f2d-9cd5-6f98a2b5973e"
+      ]
+    },
+    {
+      "relationship_id": "de98524f-f933-4acd-83cb-0d0cec8579a9",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "c7eb9f15-5032-4478-9756-d971920cc15b",
+      "relationship_type": "LOCATED_IN",
+      "description": "The wife enters the room.",
+      "weight": 1.0,
+      "source_chunks": [
+        "086bd89b-3d2f-4f2d-9cd5-6f98a2b5973e"
+      ]
+    },
+    {
+      "relationship_id": "d57a339b-28c7-404e-9452-26ab96bc9961",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "b846a23b-7c1b-4cdf-980b-954e27689689",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator considers money in the context of the situation.",
+      "weight": 1.0,
+      "source_chunks": [
+        "086bd89b-3d2f-4f2d-9cd5-6f98a2b5973e"
+      ]
+    },
+    {
+      "relationship_id": "6ca9a627-26d4-4e0d-a9a9-11649f93535c",
+      "source_entity_id": "8ccb1093-4595-4397-bdab-cde3ae686a9f",
+      "target_entity_id": "2e22a7df-4bbc-4f03-967c-6cde04955016",
+      "relationship_type": "LOCATED_IN",
+      "description": "The narrator travels from 경성역 to 미쓰꼬시.",
+      "weight": 1.0,
+      "source_chunks": [
+        "581d895c-d56d-4131-96b1-5f3bd733a7df"
+      ]
+    },
+    {
+      "relationship_id": "71ca77b9-4e89-446d-ae58-947f1eb9e48a",
+      "source_entity_id": "98de6e60-2262-40cf-8b01-358b991e8637",
+      "target_entity_id": "b27ac91a-86ed-419f-a00e-6ea57d863273",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator compares the struggles of life to the movement of goldfish fins.",
+      "weight": 1.0,
+      "source_chunks": [
+        "581d895c-d56d-4131-96b1-5f3bd733a7df"
+      ]
+    },
+    {
+      "relationship_id": "1e6c4d4a-4dec-4834-b5d5-a8be53cc959d",
+      "source_entity_id": "498bde42-03e3-4bec-89f3-ed7089f4541b",
+      "target_entity_id": "98de6e60-2262-40cf-8b01-358b991e8637",
+      "relationship_type": "REFLECTS_ON",
+      "description": "The narrator reflects on their life experiences while observing the goldfish.",
+      "weight": 1.0,
+      "source_chunks": [
+        "581d895c-d56d-4131-96b1-5f3bd733a7df"
+      ]
+    },
+    {
+      "relationship_id": "1f4569f1-dc3b-43a5-885d-f0305316401f",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "a97bf396-51da-4db2-ab62-06299d4f061a",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator questions if the wife gave him aspirin instead of adalin",
+      "weight": 1.0,
+      "source_chunks": [
+        "33c9d99a-46e5-4b91-b2da-3227d703ff45"
+      ]
+    },
+    {
+      "relationship_id": "45c9474e-186b-4156-9487-a8abbdf2accd",
+      "source_entity_id": "93da7c62-27b9-490b-85ea-f3be24d4e276",
+      "target_entity_id": "5d3a14ef-72b4-4454-b175-4102d28cece8",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator questions if the wife gave him adalin instead of aspirin",
+      "weight": 1.0,
+      "source_chunks": [
+        "33c9d99a-46e5-4b91-b2da-3227d703ff45"
+      ]
+    },
+    {
+      "relationship_id": "6f0a58f4-da12-4662-af93-736a3c16ddd8",
+      "source_entity_id": "4de206df-15e8-435d-aab4-2e58601f1c89",
+      "target_entity_id": "a333e3ce-2e99-4152-9b5d-a04c84c4b042",
+      "relationship_type": "RELATED_TO",
+      "description": "The narrator expresses a desire for the wings to grow back at noon",
+      "weight": 1.0,
+      "source_chunks": [
+        "33c9d99a-46e5-4b91-b2da-3227d703ff45"
+      ]
+    }
+  ]
+}

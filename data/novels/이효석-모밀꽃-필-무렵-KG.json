@@ -1,0 +1,959 @@
+{
+  "entities": {
+    "5d169313-7a71-434a-aaa7-6e6efd3ad25e": {
+      "entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "name": "허생원",
+      "entity_type": "PERSON",
+      "description": "A character who is involved in a conversation about business. A character who seems to have a troubled relationship with women and is critical of others. A character who is drinking and reflecting on his situation. A character who is embarrassed and interacts with children. A character who reflects on his past and experiences. A character mentioned in the text, likely a storyteller. A character in the text who shares a story. A character who is struggling and reflecting on his life. A character who is experiencing cold and has a light-hearted feeling.",
+      "attributes": {},
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4",
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb",
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a",
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8",
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3",
+        "59c988cd-826c-481d-b1e8-801f92860eed",
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4",
+        "bcfb4742-6db3-4a62-b350-6d87f2824fe8",
+        "433d29dc-dadb-4043-99bd-2e002da4a1e2"
+      ]
+    },
+    "c0b3b38a-212e-492f-82e4-bc048681480f": {
+      "entity_id": "c0b3b38a-212e-492f-82e4-bc048681480f",
+      "name": "조선달",
+      "entity_type": "PERSON",
+      "description": "A character who is a partner of 허생원 and discusses market activities. A character mentioned in relation to the events at 충줏집. A character who is preparing to load a donkey. A friend of 허생원 who listens to his stories. A character who is crossing the water with 허생원 and 동이. A character who laughs and interacts with 허생원.",
+      "attributes": {},
+      "source_chunks": [
+        "433d29dc-dadb-4043-99bd-2e002da4a1e2",
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8",
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3",
+        "59c988cd-826c-481d-b1e8-801f92860eed",
+        "bcfb4742-6db3-4a62-b350-6d87f2824fe8",
+        "604ff05f-2949-471e-bc42-670f424444f4"
+      ]
+    },
+    "883b8b1e-fb2d-475b-ace2-1ee1e94188d6": {
+      "entity_id": "883b8b1e-fb2d-475b-ace2-1ee1e94188d6",
+      "name": "봉평장",
+      "entity_type": "PLACE",
+      "description": "A market where 허생원 and 조선달 have previously sold goods. A market that 허생원 rarely leaves.",
+      "attributes": {},
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8",
+        "59c988cd-826c-481d-b1e8-801f92860eed"
+      ]
+    },
+    "9745f3db-db64-4c73-8d4b-0c37e898a1ee": {
+      "entity_id": "9745f3db-db64-4c73-8d4b-0c37e898a1ee",
+      "name": "대화장",
+      "entity_type": "PLACE",
+      "description": "A market where 허생원 and 조선달 plan to make money the next day.",
+      "attributes": {},
+      "source_chunks": [
+        "59c988cd-826c-481d-b1e8-801f92860eed"
+      ]
+    },
+    "7f38d9ff-c152-4311-927d-dc001568278b": {
+      "entity_id": "7f38d9ff-c152-4311-927d-dc001568278b",
+      "name": "진부",
+      "entity_type": "PLACE",
+      "description": "A location mentioned in relation to the market activities.",
+      "attributes": {},
+      "source_chunks": [
+        "59c988cd-826c-481d-b1e8-801f92860eed"
+      ]
+    },
+    "77fbc90d-f817-4c81-b1b7-56bf589176b1": {
+      "entity_id": "77fbc90d-f817-4c81-b1b7-56bf589176b1",
+      "name": "축들",
+      "entity_type": "OTHER",
+      "description": "Refers to the vendors or traders involved in the market.",
+      "attributes": {},
+      "source_chunks": [
+        "59c988cd-826c-481d-b1e8-801f92860eed"
+      ]
+    },
+    "62c7e417-51ae-4f35-9eb0-810575897a39": {
+      "entity_id": "62c7e417-51ae-4f35-9eb0-810575897a39",
+      "name": "계집",
+      "entity_type": "PERSON",
+      "description": "A woman whose voice is heard during the market scene.",
+      "attributes": {},
+      "source_chunks": [
+        "59c988cd-826c-481d-b1e8-801f92860eed"
+      ]
+    },
+    "0f5a5c5f-6845-4e43-bec3-753cdc64824a": {
+      "entity_id": "0f5a5c5f-6845-4e43-bec3-753cdc64824a",
+      "name": "충줏집",
+      "entity_type": "PLACE",
+      "description": "A location mentioned in the context of a conversation. A place where characters gather, likely a tavern or bar.",
+      "attributes": {},
+      "source_chunks": [
+        "59c988cd-826c-481d-b1e8-801f92860eed",
+        "bcfb4742-6db3-4a62-b350-6d87f2824fe8"
+      ]
+    },
+    "656ca029-9590-4aed-a258-80512ddca9b1": {
+      "entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "name": "동이",
+      "entity_type": "PERSON",
+      "description": "A character who is involved in a conflict with 허생원. A character who is mentioned as being in a hurry to call for 허생원. A character who is also preparing to load a donkey. A character who is listening to 허생원. A character who interacts with 허생원 and shares personal experiences. A character who is younger and is helping 허생원. A character mentioned in the text, possibly a companion or friend.",
+      "attributes": {},
+      "source_chunks": [
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb",
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a",
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8",
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3",
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4",
+        "bcfb4742-6db3-4a62-b350-6d87f2824fe8",
+        "604ff05f-2949-471e-bc42-670f424444f4"
+      ]
+    },
+    "560e1eae-724b-41c3-8d7d-78ef097d346d": {
+      "entity_id": "560e1eae-724b-41c3-8d7d-78ef097d346d",
+      "name": "당나귀",
+      "entity_type": "OTHER",
+      "description": "A donkey that 허생원 has a long relationship with. A donkey that is significant to 허생원.",
+      "attributes": {},
+      "source_chunks": [
+        "433d29dc-dadb-4043-99bd-2e002da4a1e2",
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a"
+      ]
+    },
+    "b992b26f-ddf0-4d8b-9114-7e662a91dd28": {
+      "entity_id": "b992b26f-ddf0-4d8b-9114-7e662a91dd28",
+      "name": "부락스런 녀석들",
+      "entity_type": "OTHER",
+      "description": "A group of mischievous children causing trouble.",
+      "attributes": {},
+      "source_chunks": [
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a"
+      ]
+    },
+    "abb3d0af-d6ab-4cbd-b902-ee47e4501be1": {
+      "entity_id": "abb3d0af-d6ab-4cbd-b902-ee47e4501be1",
+      "name": "아이들",
+      "entity_type": "OTHER",
+      "description": "Children who are playing and causing mischief.",
+      "attributes": {},
+      "source_chunks": [
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a"
+      ]
+    },
+    "6b42e40e-6ebc-48fd-9db8-80c56b4dd9d6": {
+      "entity_id": "6b42e40e-6ebc-48fd-9db8-80c56b4dd9d6",
+      "name": "주막",
+      "entity_type": "PLACE",
+      "description": "An inn where 허생원 and the donkey have spent time together.",
+      "attributes": {},
+      "source_chunks": [
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a"
+      ]
+    },
+    "ebd3a8b8-045e-438d-a627-998049f7250b": {
+      "entity_id": "ebd3a8b8-045e-438d-a627-998049f7250b",
+      "name": "김첨지",
+      "entity_type": "PERSON",
+      "description": "A character mentioned in relation to a donkey.",
+      "attributes": {},
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    "d82ecca7-6565-48c7-8785-4cba44f13d3e": {
+      "entity_id": "d82ecca7-6565-48c7-8785-4cba44f13d3e",
+      "name": "각다귀",
+      "entity_type": "OTHER",
+      "description": "A term used to refer to a type of person or character.",
+      "attributes": {},
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    "358c7c26-5019-4362-af15-088ca047bd81": {
+      "entity_id": "358c7c26-5019-4362-af15-088ca047bd81",
+      "name": "청주",
+      "entity_type": "PLACE",
+      "description": "A hometown mentioned by 허생원.",
+      "attributes": {},
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    "7713a623-9b35-402a-96b1-281b6ea20a85": {
+      "entity_id": "7713a623-9b35-402a-96b1-281b6ea20a85",
+      "name": "충주",
+      "entity_type": "PLACE",
+      "description": "A neighboring county mentioned.",
+      "attributes": {},
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    "707cfdb3-437f-485e-b752-4a301dd85bfa": {
+      "entity_id": "707cfdb3-437f-485e-b752-4a301dd85bfa",
+      "name": "제천",
+      "entity_type": "PLACE",
+      "description": "A neighboring county mentioned. A location mentioned in relation to an event. A location mentioned in the text, associated with the character's past. A location mentioned as the hometown of 허생원의 mother. A location where 허생원 is currently located.",
+      "attributes": {},
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4",
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8",
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3",
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4",
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb"
+      ]
+    },
+    "df39342b-b17e-4a5a-9d81-b6b85f900cd1": {
+      "entity_id": "df39342b-b17e-4a5a-9d81-b6b85f900cd1",
+      "name": "영남",
+      "entity_type": "PLACE",
+      "description": "A distant region mentioned.",
+      "attributes": {},
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    "9ce0eccc-238d-4972-a29b-4cf0cdb29dd9": {
+      "entity_id": "9ce0eccc-238d-4972-a29b-4cf0cdb29dd9",
+      "name": "강릉",
+      "entity_type": "PLACE",
+      "description": "A place where 허생원 goes to buy goods.",
+      "attributes": {},
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    "4e0c7512-1211-4b8c-9af9-14be7ff6601e": {
+      "entity_id": "4e0c7512-1211-4b8c-9af9-14be7ff6601e",
+      "name": "봉평",
+      "entity_type": "PLACE",
+      "description": "A location associated with 허생원's past. A location known for its buckwheat fields. A location that the character has a fondness for. A location mentioned in the conversation. A location mentioned as a place to bring someone in the fall.",
+      "attributes": {},
+      "source_chunks": [
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb",
+        "433d29dc-dadb-4043-99bd-2e002da4a1e2",
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3",
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4",
+        "604ff05f-2949-471e-bc42-670f424444f4"
+      ]
+    },
+    "140ab40e-8af0-4bf9-ae27-ee508b7895b0": {
+      "entity_id": "140ab40e-8af0-4bf9-ae27-ee508b7895b0",
+      "name": "백중",
+      "entity_type": "EVENT",
+      "description": "A festival or event mentioned in the context of 허생원's past.",
+      "attributes": {},
+      "source_chunks": [
+        "433d29dc-dadb-4043-99bd-2e002da4a1e2"
+      ]
+    },
+    "c94beea8-c11f-4731-926d-ce6acc52d522": {
+      "entity_id": "c94beea8-c11f-4731-926d-ce6acc52d522",
+      "name": "장선",
+      "entity_type": "PERSON",
+      "description": "A character referenced in a memory.",
+      "attributes": {},
+      "source_chunks": [
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4"
+      ]
+    },
+    "99529e1e-b99a-42ff-bf1d-4decdfe295da": {
+      "entity_id": "99529e1e-b99a-42ff-bf1d-4decdfe295da",
+      "name": "성서방네 처녀",
+      "entity_type": "PERSON",
+      "description": "A girl encountered by the narrator.",
+      "attributes": {},
+      "source_chunks": [
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4"
+      ]
+    },
+    "b7ba6084-88af-43bc-b4d1-f5ef2b08ea77": {
+      "entity_id": "b7ba6084-88af-43bc-b4d1-f5ef2b08ea77",
+      "name": "메밀밭",
+      "entity_type": "CONCEPT",
+      "description": "Buckwheat fields, a significant setting in the narrative.",
+      "attributes": {},
+      "source_chunks": [
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4"
+      ]
+    },
+    "723e620c-d33a-490d-8d53-0914b2919e9d": {
+      "entity_id": "723e620c-d33a-490d-8d53-0914b2919e9d",
+      "name": "객줏집",
+      "entity_type": "OTHER",
+      "description": "An inn or guesthouse mentioned in the text.",
+      "attributes": {},
+      "source_chunks": [
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4"
+      ]
+    },
+    "8ebd5d9b-ce5e-4738-9e7a-e3ae8ce586cf": {
+      "entity_id": "8ebd5d9b-ce5e-4738-9e7a-e3ae8ce586cf",
+      "name": "돌밭",
+      "entity_type": "OTHER",
+      "description": "A stony field mentioned in the context of the setting.",
+      "attributes": {},
+      "source_chunks": [
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4"
+      ]
+    },
+    "aa3b8630-8b9d-48da-859b-d65829076644": {
+      "entity_id": "aa3b8630-8b9d-48da-859b-d65829076644",
+      "name": "장판",
+      "entity_type": "OTHER",
+      "description": "A mat or floor covering referenced in the context of a rumor.",
+      "attributes": {},
+      "source_chunks": [
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4"
+      ]
+    },
+    "19975fbc-9616-45bc-b0ec-70be558fb422": {
+      "entity_id": "19975fbc-9616-45bc-b0ec-70be558fb422",
+      "name": "어머니",
+      "entity_type": "PERSON",
+      "description": "The mother of 동이, who is mentioned in the context of family. 허생원의 mother who has faced hardships.",
+      "attributes": {},
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4",
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb"
+      ]
+    },
+    "7ed4555c-740c-4c93-9ac0-a403e4daceb3": {
+      "entity_id": "7ed4555c-740c-4c93-9ac0-a403e4daceb3",
+      "name": "아버지",
+      "entity_type": "PERSON",
+      "description": "The father of 동이, who is absent in their life.",
+      "attributes": {},
+      "source_chunks": [
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb"
+      ]
+    },
+    "2eef9f79-0f83-478e-960f-fafb02bb77ff": {
+      "entity_id": "2eef9f79-0f83-478e-960f-fafb02bb77ff",
+      "name": "선달",
+      "entity_type": "PERSON",
+      "description": "A character who laughs and interacts with 허생원 and 동이.",
+      "attributes": {},
+      "source_chunks": [
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb"
+      ]
+    },
+    "db4b5cec-2801-4c24-aa6f-6e2af75e5648": {
+      "entity_id": "db4b5cec-2801-4c24-aa6f-6e2af75e5648",
+      "name": "생계",
+      "entity_type": "CONCEPT",
+      "description": "The concept of livelihood mentioned in the context of the character's struggles.",
+      "attributes": {},
+      "source_chunks": [
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb"
+      ]
+    },
+    "4c2b4805-7ed9-40c2-b1c3-6d7b00890e82": {
+      "entity_id": "4c2b4805-7ed9-40c2-b1c3-6d7b00890e82",
+      "name": "의부",
+      "entity_type": "PERSON",
+      "description": "허생원의 stepfather who is involved in the liquor business.",
+      "attributes": {},
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4"
+      ]
+    },
+    "fdbe159d-5d85-4c1f-81b0-a1bd7680b5d8": {
+      "entity_id": "fdbe159d-5d85-4c1f-81b0-a1bd7680b5d8",
+      "name": "나귀",
+      "entity_type": "OTHER",
+      "description": "A donkey mentioned in the context of crossing the water. A donkey that is referenced in the conversation.",
+      "attributes": {},
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4",
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3"
+      ]
+    },
+    "8aff24aa-f84e-42da-a145-35982d91e021": {
+      "entity_id": "8aff24aa-f84e-42da-a145-35982d91e021",
+      "name": "강릉집",
+      "entity_type": "ORGANIZATION",
+      "description": "A place or establishment mentioned in relation to a horse.",
+      "attributes": {},
+      "source_chunks": [
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3"
+      ]
+    },
+    "e6fc2da8-514b-40d7-8c0c-467b12d1daf3": {
+      "entity_id": "e6fc2da8-514b-40d7-8c0c-467b12d1daf3",
+      "name": "나귀새끼",
+      "entity_type": "OTHER",
+      "description": "A young donkey that is described as cute.",
+      "attributes": {},
+      "source_chunks": [
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3"
+      ]
+    }
+  },
+  "relationships": [
+    {
+      "relationship_id": "2b2f9e37-cd47-4a79-8cf2-228248b159d4",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "c0b3b38a-212e-492f-82e4-bc048681480f",
+      "relationship_type": "KNOWS",
+      "description": "허생원 and 조선달 are partners in business.",
+      "weight": 1.0,
+      "source_chunks": [
+        "59c988cd-826c-481d-b1e8-801f92860eed"
+      ]
+    },
+    {
+      "relationship_id": "18a50e64-ca31-4069-8e9a-14241796ef6b",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "883b8b1e-fb2d-475b-ace2-1ee1e94188d6",
+      "relationship_type": "RELATED_TO",
+      "description": "허생원 has previously sold goods at 봉평장.",
+      "weight": 1.0,
+      "source_chunks": [
+        "59c988cd-826c-481d-b1e8-801f92860eed"
+      ]
+    },
+    {
+      "relationship_id": "916afcde-8cd4-45d5-a439-2824b9a03163",
+      "source_entity_id": "c0b3b38a-212e-492f-82e4-bc048681480f",
+      "target_entity_id": "9745f3db-db64-4c73-8d4b-0c37e898a1ee",
+      "relationship_type": "RELATED_TO",
+      "description": "조선달 plans to make money at 대화장.",
+      "weight": 1.0,
+      "source_chunks": [
+        "59c988cd-826c-481d-b1e8-801f92860eed"
+      ]
+    },
+    {
+      "relationship_id": "367f499d-191d-45e8-9b40-d26c5c48d3d7",
+      "source_entity_id": "77fbc90d-f817-4c81-b1b7-56bf589176b1",
+      "target_entity_id": "9745f3db-db64-4c73-8d4b-0c37e898a1ee",
+      "relationship_type": "PART_OF",
+      "description": "축들 are vendors who will be present at 대화장.",
+      "weight": 1.0,
+      "source_chunks": [
+        "59c988cd-826c-481d-b1e8-801f92860eed"
+      ]
+    },
+    {
+      "relationship_id": "2db70401-d0a1-448e-a7c9-f259873877f1",
+      "source_entity_id": "62c7e417-51ae-4f35-9eb0-810575897a39",
+      "target_entity_id": "0f5a5c5f-6845-4e43-bec3-753cdc64824a",
+      "relationship_type": "RELATED_TO",
+      "description": "The 계집 mentions 충줏집 in conversation.",
+      "weight": 1.0,
+      "source_chunks": [
+        "59c988cd-826c-481d-b1e8-801f92860eed"
+      ]
+    },
+    {
+      "relationship_id": "c0749083-a85a-491e-9894-3f641193ea93",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "relationship_type": "CONFLICTS_WITH",
+      "description": "허생원 expresses anger and criticism towards 동이.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bcfb4742-6db3-4a62-b350-6d87f2824fe8"
+      ]
+    },
+    {
+      "relationship_id": "db1266e3-96c3-4c0e-a05b-6509b1de8cfc",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "0f5a5c5f-6845-4e43-bec3-753cdc64824a",
+      "relationship_type": "LOCATED_IN",
+      "description": "허생원 is present at 충줏집.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bcfb4742-6db3-4a62-b350-6d87f2824fe8"
+      ]
+    },
+    {
+      "relationship_id": "5f512839-48bc-407c-b0c2-b548f9b78f8f",
+      "source_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "target_entity_id": "0f5a5c5f-6845-4e43-bec3-753cdc64824a",
+      "relationship_type": "LOCATED_IN",
+      "description": "동이 is also present at 충줏집.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bcfb4742-6db3-4a62-b350-6d87f2824fe8"
+      ]
+    },
+    {
+      "relationship_id": "0a4078f7-def0-4ca8-9f2f-4d20ef699148",
+      "source_entity_id": "c0b3b38a-212e-492f-82e4-bc048681480f",
+      "target_entity_id": "0f5a5c5f-6845-4e43-bec3-753cdc64824a",
+      "relationship_type": "LOCATED_IN",
+      "description": "조선달 is mentioned in the context of 충줏집.",
+      "weight": 1.0,
+      "source_chunks": [
+        "bcfb4742-6db3-4a62-b350-6d87f2824fe8"
+      ]
+    },
+    {
+      "relationship_id": "9166bd58-e7e9-41aa-ac7a-b4969e2a3d86",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "relationship_type": "KNOWS",
+      "description": "허생원 is aware of 동이 and is curious about her.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a"
+      ]
+    },
+    {
+      "relationship_id": "5f39e7db-4108-4c06-8b35-029763ef70f1",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "560e1eae-724b-41c3-8d7d-78ef097d346d",
+      "relationship_type": "CARES_FOR",
+      "description": "허생원 has a long-term relationship with the donkey.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a"
+      ]
+    },
+    {
+      "relationship_id": "7f9cb57f-9262-4de3-b7c0-2655e617838c",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "b992b26f-ddf0-4d8b-9114-7e662a91dd28",
+      "relationship_type": "RELATED_TO",
+      "description": "허생원 is affected by the actions of the mischievous children.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a"
+      ]
+    },
+    {
+      "relationship_id": "3a0a3ca0-b459-487f-ad26-51144156df17",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "6b42e40e-6ebc-48fd-9db8-80c56b4dd9d6",
+      "relationship_type": "LOCATED_IN",
+      "description": "허생원 spends time at the 주막.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a"
+      ]
+    },
+    {
+      "relationship_id": "3e61bce6-2278-4538-be54-d1efd7d3a959",
+      "source_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "target_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "relationship_type": "CALLS_FOR",
+      "description": "동이 calls for 허생원 in a hurry.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a"
+      ]
+    },
+    {
+      "relationship_id": "c9f1390b-2c5a-45cf-b571-80a4df4f587d",
+      "source_entity_id": "560e1eae-724b-41c3-8d7d-78ef097d346d",
+      "target_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "relationship_type": "RECOGNIZES",
+      "description": "The donkey recognizes 허생원.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2641d3aa-0c15-4c99-8d99-ed6c7ab5bf6a"
+      ]
+    },
+    {
+      "relationship_id": "8800ca3d-792d-4c49-a434-02c43838df2a",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "c0b3b38a-212e-492f-82e4-bc048681480f",
+      "relationship_type": "KNOWS",
+      "description": "허생원 interacts with 조선달.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    {
+      "relationship_id": "e4f39b7c-0097-45e7-8d34-57b09d2dc3b8",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "relationship_type": "KNOWS",
+      "description": "허생원 interacts with 동이.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    {
+      "relationship_id": "35676bd3-9793-4c08-9705-d7fd132e4531",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "358c7c26-5019-4362-af15-088ca047bd81",
+      "relationship_type": "LOCATED_IN",
+      "description": "허생원 claims 청주 as his hometown.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    {
+      "relationship_id": "ab2bed5a-b3ab-41a9-bea8-efc1313e0184",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "883b8b1e-fb2d-475b-ace2-1ee1e94188d6",
+      "relationship_type": "PART_OF",
+      "description": "허생원 is often found at 봉평장.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    {
+      "relationship_id": "ed2deb78-c32d-4412-92a1-353b69793f03",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "7713a623-9b35-402a-96b1-281b6ea20a85",
+      "relationship_type": "RELATED_TO",
+      "description": "허생원 travels to 충주.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    {
+      "relationship_id": "2e43610a-9af4-4583-a31f-b34be08e758b",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "707cfdb3-437f-485e-b752-4a301dd85bfa",
+      "relationship_type": "RELATED_TO",
+      "description": "허생원 travels to 제천.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    {
+      "relationship_id": "95cd7560-61f7-4b1d-8503-66940b6e05a6",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "df39342b-b17e-4a5a-9d81-b6b85f900cd1",
+      "relationship_type": "RELATED_TO",
+      "description": "허생원 has wandered in 영남.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    {
+      "relationship_id": "e5a5e817-8b1e-43de-9815-5ae50e8b67dc",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "9ce0eccc-238d-4972-a29b-4cf0cdb29dd9",
+      "relationship_type": "RELATED_TO",
+      "description": "허생원 goes to 강릉 to buy goods.",
+      "weight": 1.0,
+      "source_chunks": [
+        "8b1ee840-30e4-4ccb-89c1-52a1503550e8"
+      ]
+    },
+    {
+      "relationship_id": "5cf9ee00-851b-4093-a1ca-0f3574ba1b4d",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "c0b3b38a-212e-492f-82e4-bc048681480f",
+      "relationship_type": "KNOWS",
+      "description": "허생원 and 조선달 are friends.",
+      "weight": 1.0,
+      "source_chunks": [
+        "433d29dc-dadb-4043-99bd-2e002da4a1e2"
+      ]
+    },
+    {
+      "relationship_id": "27c998e3-0e51-40f4-a80f-bb0cf12ce019",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "4e0c7512-1211-4b8c-9af9-14be7ff6601e",
+      "relationship_type": "LOCATED_IN",
+      "description": "허생원 has experiences related to 봉평.",
+      "weight": 1.0,
+      "source_chunks": [
+        "433d29dc-dadb-4043-99bd-2e002da4a1e2"
+      ]
+    },
+    {
+      "relationship_id": "8ccc7694-a331-4d5e-bef0-10ba1d1aad2d",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "560e1eae-724b-41c3-8d7d-78ef097d346d",
+      "relationship_type": "HAS",
+      "description": "허생원 has a close relationship with a donkey.",
+      "weight": 1.0,
+      "source_chunks": [
+        "433d29dc-dadb-4043-99bd-2e002da4a1e2"
+      ]
+    },
+    {
+      "relationship_id": "a8355f21-b0df-4f01-be08-4907039fe2b9",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "140ab40e-8af0-4bf9-ae27-ee508b7895b0",
+      "relationship_type": "RELATED_TO",
+      "description": "허생원 recalls the 백중 event from his past.",
+      "weight": 1.0,
+      "source_chunks": [
+        "433d29dc-dadb-4043-99bd-2e002da4a1e2"
+      ]
+    },
+    {
+      "relationship_id": "9f9d5ecd-cb77-4f36-b09f-1891ab90672b",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "relationship_type": "KNOWS",
+      "description": "허생원 is telling a story to 동이.",
+      "weight": 1.0,
+      "source_chunks": [
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4"
+      ]
+    },
+    {
+      "relationship_id": "d8e4456c-2acd-46c8-b997-e041835e232e",
+      "source_entity_id": "c94beea8-c11f-4731-926d-ce6acc52d522",
+      "target_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "relationship_type": "RELATED_TO",
+      "description": "장선 is mentioned in a memory by 허생원.",
+      "weight": 1.0,
+      "source_chunks": [
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4"
+      ]
+    },
+    {
+      "relationship_id": "a974fb06-30e5-4d59-8169-7e70db570fb6",
+      "source_entity_id": "99529e1e-b99a-42ff-bf1d-4decdfe295da",
+      "target_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "relationship_type": "RELATED_TO",
+      "description": "성서방네 처녀 is encountered by 허생원.",
+      "weight": 1.0,
+      "source_chunks": [
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4"
+      ]
+    },
+    {
+      "relationship_id": "70c863ae-f00f-49c0-bcbb-9ca58c36ca21",
+      "source_entity_id": "4e0c7512-1211-4b8c-9af9-14be7ff6601e",
+      "target_entity_id": "b7ba6084-88af-43bc-b4d1-f5ef2b08ea77",
+      "relationship_type": "LOCATED_IN",
+      "description": "봉평 is known for its 메밀밭.",
+      "weight": 1.0,
+      "source_chunks": [
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4"
+      ]
+    },
+    {
+      "relationship_id": "24569ed3-19d9-447e-9d78-92dfe02cda38",
+      "source_entity_id": "707cfdb3-437f-485e-b752-4a301dd85bfa",
+      "target_entity_id": "aa3b8630-8b9d-48da-859b-d65829076644",
+      "relationship_type": "RELATED_TO",
+      "description": "장판 is associated with rumors in 제천.",
+      "weight": 1.0,
+      "source_chunks": [
+        "c9b821e8-d65f-48ac-b402-82cefa546cb4"
+      ]
+    },
+    {
+      "relationship_id": "5250d760-1ed1-44f8-89ad-abe6bf435dd3",
+      "source_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "target_entity_id": "19975fbc-9616-45bc-b0ec-70be558fb422",
+      "relationship_type": "RELATED_TO",
+      "description": "동이 is related to 어머니 as their child.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb"
+      ]
+    },
+    {
+      "relationship_id": "7a1bb874-8ae7-47b2-95ae-e6d337b0cde7",
+      "source_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "target_entity_id": "7ed4555c-740c-4c93-9ac0-a403e4daceb3",
+      "relationship_type": "RELATED_TO",
+      "description": "동이 is related to 아버지 as their child, but has never met him.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb"
+      ]
+    },
+    {
+      "relationship_id": "172be94f-697c-4056-9c68-1b440b0da944",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "relationship_type": "KNOWS",
+      "description": "허생원 knows 동이 and shares a conversation with them.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb"
+      ]
+    },
+    {
+      "relationship_id": "2f593e82-356e-4d6f-a70d-942102c16304",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "2eef9f79-0f83-478e-960f-fafb02bb77ff",
+      "relationship_type": "KNOWS",
+      "description": "허생원 knows 선달 and interacts with them.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb"
+      ]
+    },
+    {
+      "relationship_id": "e5f461dd-b783-4a87-be86-1621cbfaf464",
+      "source_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "target_entity_id": "707cfdb3-437f-485e-b752-4a301dd85bfa",
+      "relationship_type": "LOCATED_IN",
+      "description": "동이 has a past connection to 제천.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb"
+      ]
+    },
+    {
+      "relationship_id": "73728120-abe6-445d-bfaf-c93622368c82",
+      "source_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "target_entity_id": "4e0c7512-1211-4b8c-9af9-14be7ff6601e",
+      "relationship_type": "LOCATED_IN",
+      "description": "동이 has a fondness for 봉평.",
+      "weight": 1.0,
+      "source_chunks": [
+        "2e4b520f-2016-4e6c-99ed-e89653a7dcbb"
+      ]
+    },
+    {
+      "relationship_id": "1ce79c10-0198-4a84-83b6-3c4e0c7684a8",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "19975fbc-9616-45bc-b0ec-70be558fb422",
+      "relationship_type": "PART_OF",
+      "description": "허생원 is the son of 어머니.",
+      "weight": 1.0,
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4"
+      ]
+    },
+    {
+      "relationship_id": "18bf42d2-a3cc-4088-8491-6011c530c542",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "4c2b4805-7ed9-40c2-b1c3-6d7b00890e82",
+      "relationship_type": "WORKS_FOR",
+      "description": "허생원’s mother is married to 의부 who runs a liquor business.",
+      "weight": 1.0,
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4"
+      ]
+    },
+    {
+      "relationship_id": "39a69614-f325-4bba-895e-69e3f6193123",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "relationship_type": "KNOWS",
+      "description": "허생원 knows 동이 who is helping him.",
+      "weight": 1.0,
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4"
+      ]
+    },
+    {
+      "relationship_id": "fdf72f30-6e0d-49de-a998-53a808eb1b00",
+      "source_entity_id": "19975fbc-9616-45bc-b0ec-70be558fb422",
+      "target_entity_id": "707cfdb3-437f-485e-b752-4a301dd85bfa",
+      "relationship_type": "LOCATED_IN",
+      "description": "어머니 is originally from 제천.",
+      "weight": 1.0,
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4"
+      ]
+    },
+    {
+      "relationship_id": "bf30b39b-0136-4493-8ef3-3cc6f5c09e9b",
+      "source_entity_id": "19975fbc-9616-45bc-b0ec-70be558fb422",
+      "target_entity_id": "4e0c7512-1211-4b8c-9af9-14be7ff6601e",
+      "relationship_type": "RELATED_TO",
+      "description": "어머니 has some connection to 봉평.",
+      "weight": 1.0,
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4"
+      ]
+    },
+    {
+      "relationship_id": "26c64075-90f8-4126-a459-5bdd1aa86075",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "fdbe159d-5d85-4c1f-81b0-a1bd7680b5d8",
+      "relationship_type": "RELATED_TO",
+      "description": "허생원 is associated with 나귀 during the crossing.",
+      "weight": 1.0,
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4"
+      ]
+    },
+    {
+      "relationship_id": "f5e85c2e-c79b-489c-8697-6722dd85f5d1",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "c0b3b38a-212e-492f-82e4-bc048681480f",
+      "relationship_type": "KNOWS",
+      "description": "허생원 knows 조선달 who is crossing the water.",
+      "weight": 1.0,
+      "source_chunks": [
+        "604ff05f-2949-471e-bc42-670f424444f4"
+      ]
+    },
+    {
+      "relationship_id": "7f0baa59-d968-4e60-97a0-35d0b1bb36e3",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "707cfdb3-437f-485e-b752-4a301dd85bfa",
+      "relationship_type": "LOCATED_IN",
+      "description": "허생원 is currently located in 제천.",
+      "weight": 1.0,
+      "source_chunks": [
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3"
+      ]
+    },
+    {
+      "relationship_id": "cb0f2e14-e98f-4eae-b33b-5af0c7b50207",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "relationship_type": "KNOWS",
+      "description": "허생원 knows 동이.",
+      "weight": 1.0,
+      "source_chunks": [
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3"
+      ]
+    },
+    {
+      "relationship_id": "b307cf0f-417a-4e49-bbcb-d65642d33ec4",
+      "source_entity_id": "c0b3b38a-212e-492f-82e4-bc048681480f",
+      "target_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "relationship_type": "KNOWS",
+      "description": "조선달 knows 허생원.",
+      "weight": 1.0,
+      "source_chunks": [
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3"
+      ]
+    },
+    {
+      "relationship_id": "f75cc881-d78d-4808-b517-2960ebad7ba6",
+      "source_entity_id": "656ca029-9590-4aed-a258-80512ddca9b1",
+      "target_entity_id": "fdbe159d-5d85-4c1f-81b0-a1bd7680b5d8",
+      "relationship_type": "RELATED_TO",
+      "description": "동이 is related to the 나귀.",
+      "weight": 1.0,
+      "source_chunks": [
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3"
+      ]
+    },
+    {
+      "relationship_id": "9786ca84-1161-4a00-8d6b-0b27406f3b0c",
+      "source_entity_id": "fdbe159d-5d85-4c1f-81b0-a1bd7680b5d8",
+      "target_entity_id": "e6fc2da8-514b-40d7-8c0c-467b12d1daf3",
+      "relationship_type": "PART_OF",
+      "description": "나귀 has a 나귀새끼.",
+      "weight": 1.0,
+      "source_chunks": [
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3"
+      ]
+    },
+    {
+      "relationship_id": "815c2836-d6c0-4c8a-b0f6-593d1afda124",
+      "source_entity_id": "5d169313-7a71-434a-aaa7-6e6efd3ad25e",
+      "target_entity_id": "4e0c7512-1211-4b8c-9af9-14be7ff6601e",
+      "relationship_type": "RELATED_TO",
+      "description": "허생원 is planning to go to 봉평.",
+      "weight": 1.0,
+      "source_chunks": [
+        "3b7ddce8-f42d-4226-b64e-3c45de77b9c3"
+      ]
+    }
+  ]
+}

@@ -2,8 +2,8 @@ import os
 from mini_graph_rag import GraphRAG
 
 # Paths
-DOCUMENT_PATH = "data/현진건-운수좋은날.txt"
-GRAPH_PATH = "data/현진건-운수좋은날-knowledge-graph.json"
+DOCUMENT_PATH = "data/novels/김유정-동백꽃.txt"
+GRAPH_PATH = "data/novels/김유정-동백꽃-KG.json"
 
 # Initialize the system
 rag = GraphRAG()
@@ -23,7 +23,7 @@ stats = rag.get_stats()
 print(f"Entities: {stats['entities']}, Relationships: {stats['relationships']}")
 
 # Query the knowledge graph
-query = "김첨지에 대해서 알려줘."
+query = "이 소설의 주인공에 대해서 설명해줘."
 print(f"\nQuery: {query}")
 response = rag.query(query)
 print(f"Response: {response}")

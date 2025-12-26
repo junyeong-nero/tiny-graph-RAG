@@ -2,8 +2,11 @@
 
 import pytest
 
+from mini_graph_rag.chunking.chunker import Chunk
+from mini_graph_rag.extraction.extractor import EntityRelationshipExtractor
 from mini_graph_rag.extraction.parser import ExtractionParser
 from mini_graph_rag.graph import Entity, Relationship
+from mini_graph_rag.llm.client import OpenAIClient
 
 
 class TestExtractionParser:
@@ -145,3 +148,40 @@ class TestExtractionParser:
 
         assert len(entities) == 2
         assert len(relationships) == 1
+
+
+class TestAsyncExtractor:
+    """Tests for async extraction methods."""
+
+    @pytest.mark.asyncio
+    async def test_async_extract_batch(self, mocker):
+        """Test async batch extraction with mocked LLM client."""
+        # Mock the async_chat_json method
+        mock_response = {
+            "entities": [
+                {"name": "Alice", "type": "PERSON", "description": "A person"},
+            ],
+            "relationships": [],
+        }
+
+        mock_client = mocker.Mock(spec=OpenAIClient)
+        mock_client.async_chat_json = mocker.AsyncMock(return_value=mock_response)
+
+        extractor = EntityRelationshipExtractor(mock_client)
+
+        # Create test chunks
+        chunks = [
+            Chunk(text="Alice is a person.", chunk_id="chunk1", start_index=0, end_index=18, doc_id="doc1"),
+            Chunk(text="Bob is a person.", chunk_id="chunk2", start_index=0, end_index=16, doc_id="doc1"),
+            Chunk(text="Charlie is a person.", chunk_id="chunk3", start_index=0, end_index=20, doc_id="doc1"),
+        ]
+
+        # Test async batch extraction
+        results = await extractor.async_extract_batch(chunks)
+
+        # Verify results
+        assert len(results) == 3
+        assert all(len(r.entities) == 1 for r in results)
+
+        # Verify that async_chat_json was called 3 times (once per chunk)
+        assert mock_client.async_chat_json.call_count == 3

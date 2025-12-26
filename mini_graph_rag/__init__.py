@@ -1,5 +1,6 @@
 """Mini-Graph-RAG: A naive implementation of Graph-based RAG."""
 
+import asyncio
 from pathlib import Path
 
 from .chunking import TextChunker
@@ -44,8 +45,10 @@ class GraphRAG:
         text = self._read_document(file_path)
         self.process_text(text, doc_id=str(file_path))
 
-    def process_text(self, text: str, doc_id: str = "document") -> None:
-        """Process raw text and add to knowledge graph.
+    async def async_process_text(self, text: str, doc_id: str = "document") -> None:
+        """Process raw text and add to knowledge graph asynchronously.
+
+        This method uses async/await to process chunks in parallel for better performance.
 
         Args:
             text: The text to process
@@ -55,18 +58,31 @@ class GraphRAG:
         chunks = self.chunker.chunk(text, doc_id=doc_id)
         print(f"Created {len(chunks)} chunks from document")
 
-        # Extract entities and relationships from each chunk
-        for i, chunk in enumerate(chunks):
-            print(f"Processing chunk {i + 1}/{len(chunks)}...")
-            result = self.extractor.extract(chunk)
+        # Extract entities and relationships from all chunks in parallel
+        print(f"Processing {len(chunks)} chunks in parallel...")
+        results = await self.extractor.async_extract_batch(chunks)
+
+        # Add results to graph builder
+        for i, result in enumerate(results):
             self.graph_builder.add_extraction_result(result)
-            print(f"  Extracted {len(result.entities)} entities, {len(result.relationships)} relationships")
+            print(f"  Chunk {i + 1}: Extracted {len(result.entities)} entities, {len(result.relationships)} relationships")
 
         # Build the graph
         self.graph = self.graph_builder.build()
         self.retriever = GraphRetriever(self.graph, self.llm_client)
 
         print(f"Knowledge graph built: {len(self.graph.entities)} entities, {len(self.graph.relationships)} relationships")
+
+    def process_text(self, text: str, doc_id: str = "document") -> None:
+        """Process raw text and add to knowledge graph.
+
+        This method uses async processing internally for better performance.
+
+        Args:
+            text: The text to process
+            doc_id: Optional document identifier
+        """
+        asyncio.run(self.async_process_text(text, doc_id))
 
     def query(self, question: str) -> str:
         """Query the knowledge graph and generate response.

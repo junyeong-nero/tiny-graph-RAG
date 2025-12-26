@@ -1,5 +1,6 @@
 """Entity and relationship extraction from text."""
 
+import asyncio
 from dataclasses import dataclass
 
 from ..chunking.chunker import Chunk
@@ -64,6 +65,40 @@ class EntityRelationshipExtractor:
                 source_chunk_id=chunk.chunk_id,
             )
 
+    async def async_extract(self, chunk: Chunk) -> ExtractionResult:
+        """Extract entities and relationships from a single chunk asynchronously.
+
+        Args:
+            chunk: Text chunk to extract from
+
+        Returns:
+            ExtractionResult with entities and relationships
+        """
+        user_prompt = build_extraction_prompt(chunk.text)
+
+        try:
+            response = await self.llm_client.async_chat_json(
+                system_prompt=EXTRACTION_SYSTEM_PROMPT,
+                user_prompt=user_prompt,
+            )
+
+            entities, relationships = self.parser.parse(response, chunk.chunk_id)
+
+            return ExtractionResult(
+                entities=entities,
+                relationships=relationships,
+                source_chunk_id=chunk.chunk_id,
+            )
+
+        except Exception as e:
+            # Return empty result on error
+            print(f"Extraction error for chunk {chunk.chunk_id}: {e}")
+            return ExtractionResult(
+                entities=[],
+                relationships=[],
+                source_chunk_id=chunk.chunk_id,
+            )
+
     def extract_batch(self, chunks: list[Chunk]) -> list[ExtractionResult]:
         """Extract from multiple chunks.
 
@@ -78,3 +113,16 @@ class EntityRelationshipExtractor:
             result = self.extract(chunk)
             results.append(result)
         return results
+
+    async def async_extract_batch(self, chunks: list[Chunk]) -> list[ExtractionResult]:
+        """Extract from multiple chunks in parallel using async.
+
+        Args:
+            chunks: List of chunks to process
+
+        Returns:
+            List of ExtractionResults
+        """
+        tasks = [self.async_extract(chunk) for chunk in chunks]
+        results = await asyncio.gather(*tasks)
+        return list(results)

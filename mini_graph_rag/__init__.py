@@ -153,6 +153,40 @@ class GraphRAG:
             "relationship_types": relationship_types,
         }
 
+    def visualize(
+        self,
+        output_path: str = "graph_viz.html",
+        filter_types: list[str] | None = None,
+        min_weight: float = 0.0,
+        max_nodes: int = 200,
+        show: bool = True,
+    ) -> None:
+        """Visualize the knowledge graph as an interactive HTML file.
+
+        Args:
+            output_path: Path to save HTML visualization (default: graph_viz.html)
+            filter_types: List of entity types to include (e.g., ["PERSON", "PLACE"])
+            min_weight: Minimum relationship weight to display (default: 0.0)
+            max_nodes: Maximum number of nodes to display (default: 200)
+            show: Whether to open in browser automatically (default: True)
+        """
+        if not self.graph:
+            raise ValueError("No graph to visualize. Load or process a document first.")
+
+        from .visualization import PyVisVisualizer
+
+        viz = PyVisVisualizer(
+            graph=self.graph,
+            filter_types=filter_types,
+            min_weight=min_weight,
+            max_nodes=max_nodes,
+        )
+        viz.generate()
+        viz.save(output_path)
+
+        if show:
+            viz.show()
+
     def _read_document(self, file_path: str | Path) -> str:
         """Read document from file.
 

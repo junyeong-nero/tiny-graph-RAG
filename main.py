@@ -44,6 +44,26 @@ def main():
         "-g", "--graph", help="Path to existing graph file"
     )
 
+    # Visualize command
+    visualize_parser = subparsers.add_parser(
+        "visualize", help="Visualize knowledge graph"
+    )
+    visualize_parser.add_argument(
+        "-g", "--graph", required=True, help="Path to graph JSON file"
+    )
+    visualize_parser.add_argument(
+        "-o", "--output", default="graph_viz.html", help="Output HTML file (default: graph_viz.html)"
+    )
+    visualize_parser.add_argument(
+        "--filter-type", nargs="+", help="Filter by entity types (e.g., PERSON PLACE)"
+    )
+    visualize_parser.add_argument(
+        "--min-weight", type=float, default=0.0, help="Minimum relationship weight (default: 0.0)"
+    )
+    visualize_parser.add_argument(
+        "--max-nodes", type=int, default=200, help="Maximum nodes to display (default: 200)"
+    )
+
     args = parser.parse_args()
 
     if not args.command:
@@ -59,6 +79,8 @@ def main():
             run_stats(args)
         elif args.command == "interactive":
             run_interactive(args)
+        elif args.command == "visualize":
+            run_visualize(args)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
@@ -144,6 +166,36 @@ def run_interactive(args):
 
         response = rag.query(question)
         print(f"\nAnswer: {response}")
+
+
+def run_visualize(args):
+    """Visualize a knowledge graph."""
+    from mini_graph_rag.visualization import PyVisVisualizer
+    from mini_graph_rag.graph.storage import GraphStorage
+
+    print(f"Loading graph from: {args.graph}")
+
+    # Load graph
+    storage = GraphStorage()
+    graph = storage.load_json(args.graph)
+
+    print(f"Graph loaded: {len(graph.entities)} entities, {len(graph.relationships)} relationships")
+
+    # Create visualizer
+    viz = PyVisVisualizer(
+        graph=graph,
+        filter_types=args.filter_type,
+        min_weight=args.min_weight,
+        max_nodes=args.max_nodes,
+    )
+
+    # Generate and save
+    print("Generating visualization...")
+    viz.generate()
+    viz.save(args.output)
+
+    # Open in browser
+    viz.show()
 
 
 if __name__ == "__main__":

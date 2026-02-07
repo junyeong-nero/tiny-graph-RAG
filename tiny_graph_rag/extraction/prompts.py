@@ -27,6 +27,8 @@ Return your response as a JSON object with this exact structure:
 Important:
 - Extract ALL entities mentioned in the text
 - Entity names in relationships must exactly match entity names in the entities list
+- For person mentions, keep role-based mentions or nicknames (e.g., husband, driver, nickname) as entities when they appear
+- Add relationship types like ALIAS_OF or SAME_AS when text strongly implies two mentions are the same person
 - Be thorough but precise - only extract what is explicitly stated or clearly implied"""
 
 

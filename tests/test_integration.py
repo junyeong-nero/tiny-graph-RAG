@@ -184,6 +184,42 @@ class TestGraphBuilderIntegration:
         alice = graph.get_entity_by_name("Alice")
         assert alice is not None
 
+    def test_graph_builder_runs_entity_resolver(self):
+        """Test GraphBuilder invokes resolver at build time."""
+        from tiny_graph_rag.extraction import ExtractionResult
+        from tiny_graph_rag.graph import Entity, GraphBuilder
+
+        class StubResolver:
+            def __init__(self):
+                self.called = False
+
+            def resolve(self, graph):
+                self.called = True
+                people = [
+                    entity
+                    for entity in graph.entities.values()
+                    if entity.entity_type == "PERSON"
+                ]
+                if len(people) >= 2:
+                    graph.merge_entities(people[0].entity_id, people[1].entity_id)
+
+        resolver = StubResolver()
+        builder = GraphBuilder(resolver=resolver)
+
+        result = ExtractionResult(
+            entities=[
+                Entity(name="김첨지", entity_type="PERSON"),
+                Entity(name="남편", entity_type="PERSON"),
+            ],
+            relationships=[],
+            source_chunk_id="chunk1",
+        )
+        builder.add_extraction_result(result)
+
+        graph = builder.build()
+        assert resolver.called is True
+        assert len(graph.entities) == 1
+
 
 class TestRetrievalIntegration:
     """Tests for retrieval integration."""

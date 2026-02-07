@@ -2,20 +2,29 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Protocol
 
-from .models import Entity, KnowledgeGraph, Relationship
+from .models import KnowledgeGraph, Relationship
 
 if TYPE_CHECKING:
     from ..extraction.extractor import ExtractionResult
 
 
+class EntityResolver(Protocol):
+    """Protocol for entity resolvers."""
+
+    def resolve(self, graph: KnowledgeGraph) -> None:
+        """Resolve duplicate entities in-place."""
+        ...
+
+
 class GraphBuilder:
     """Build a knowledge graph from extraction results."""
 
-    def __init__(self):
+    def __init__(self, resolver: EntityResolver | None = None):
         """Initialize the graph builder."""
         self.graph = KnowledgeGraph()
+        self.resolver = resolver
         self._pending_relationships: list[tuple[Relationship, str, str]] = []
 
     def add_extraction_result(self, result: ExtractionResult) -> None:
@@ -56,9 +65,8 @@ class GraphBuilder:
         The KnowledgeGraph already handles basic name-based deduplication,
         but this method can be extended for more sophisticated resolution.
         """
-        # Basic resolution is already handled by KnowledgeGraph.add_entity
-        # Additional resolution logic can be added here if needed
-        pass
+        if self.resolver:
+            self.resolver.resolve(self.graph)
 
     def build(self) -> KnowledgeGraph:
         """Finalize and return the knowledge graph.

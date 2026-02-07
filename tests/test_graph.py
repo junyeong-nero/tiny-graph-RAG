@@ -1,8 +1,8 @@
 """Tests for knowledge graph models and operations."""
 
-import pytest
+from unittest.mock import MagicMock
 
-from tiny_graph_rag.graph import Entity, KnowledgeGraph, Relationship
+from tiny_graph_rag.graph import Entity, KnowledgeGraph, LLMEntityResolver, Relationship
 
 
 class TestEntity:
@@ -260,3 +260,87 @@ class TestKnowledgeGraph:
         assert len(restored.relationships) == 1
         assert restored.get_entity_by_name("A") is not None
         assert restored.get_entity_by_name("B") is not None
+
+    def test_merge_entities_remaps_relationships(self):
+        """Test merging entities remaps and deduplicates relationships."""
+        graph = KnowledgeGraph()
+
+        kim = Entity(name="김첨지", entity_type="PERSON")
+        husband = Entity(name="남편", entity_type="PERSON")
+        wife = Entity(name="아내", entity_type="PERSON")
+
+        kim_id = graph.add_entity(kim)
+        husband_id = graph.add_entity(husband)
+        wife_id = graph.add_entity(wife)
+
+        graph.add_relationship(
+            Relationship(
+                source_entity_id=kim_id,
+                target_entity_id=wife_id,
+                relationship_type="CARES_FOR",
+            )
+        )
+        graph.add_relationship(
+            Relationship(
+                source_entity_id=husband_id,
+                target_entity_id=wife_id,
+                relationship_type="CARES_FOR",
+            )
+        )
+
+        merged = graph.merge_entities(kim_id, husband_id)
+
+        assert merged is True
+        assert husband_id not in graph.entities
+        assert len(graph.relationships) == 1
+        assert graph.relationships[0].source_entity_id == kim_id
+        assert graph.relationships[0].target_entity_id == wife_id
+
+
+class TestEntityResolution:
+    """Tests for LLM-based entity resolution."""
+
+    def test_llm_entity_resolver_merges_aliases(self):
+        """Test resolver can merge non-lexical aliases."""
+        graph = KnowledgeGraph()
+
+        kim = Entity(name="김첨지", entity_type="PERSON", description="인력거꾼")
+        calf = Entity(name="송아지", entity_type="PERSON", description="같은 인물의 별명")
+        wife = Entity(name="아내", entity_type="PERSON")
+
+        kim_id = graph.add_entity(kim)
+        calf_id = graph.add_entity(calf)
+        wife_id = graph.add_entity(wife)
+
+        graph.add_relationship(
+            Relationship(
+                source_entity_id=kim_id,
+                target_entity_id=wife_id,
+                relationship_type="HUSBAND_OF",
+            )
+        )
+        graph.add_relationship(
+            Relationship(
+                source_entity_id=calf_id,
+                target_entity_id=wife_id,
+                relationship_type="HUSBAND_OF",
+            )
+        )
+
+        mock_llm = MagicMock()
+        mock_llm.chat_json.return_value = {
+            "merge_groups": [
+                {
+                    "canonical_entity_id": kim_id,
+                    "duplicate_entity_ids": [calf_id],
+                    "confidence": 0.95,
+                    "reason": "same person via nickname",
+                }
+            ]
+        }
+
+        resolver = LLMEntityResolver(llm_client=mock_llm)
+        resolver.resolve(graph)
+
+        assert calf_id not in graph.entities
+        assert kim_id in graph.entities

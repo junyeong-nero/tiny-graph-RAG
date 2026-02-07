@@ -142,6 +142,50 @@ class KnowledgeGraph:
         """
         self.relationships.append(relationship)
 
+    def merge_entities(self, canonical_id: str, duplicate_id: str) -> bool:
+        """Merge duplicate entity into canonical entity.
+
+        Args:
+            canonical_id: Entity ID that should remain
+            duplicate_id: Entity ID that should be merged and removed
+
+        Returns:
+            True if merge happened, False otherwise
+        """
+        if canonical_id == duplicate_id:
+            return False
+        if canonical_id not in self.entities or duplicate_id not in self.entities:
+            return False
+
+        canonical_entity = self.entities[canonical_id]
+        duplicate_entity = self.entities[duplicate_id]
+        self.entities[canonical_id] = canonical_entity.merge_with(duplicate_entity)
+        del self.entities[duplicate_id]
+
+        remapped_relationships: list[Relationship] = []
+        for rel in self.relationships:
+            source_id = canonical_id if rel.source_entity_id == duplicate_id else rel.source_entity_id
+            target_id = canonical_id if rel.target_entity_id == duplicate_id else rel.target_entity_id
+
+            # Drop self loops introduced by merge
+            if source_id == target_id:
+                continue
+
+            remapped_relationships.append(
+                Relationship(
+                    source_entity_id=source_id,
+                    target_entity_id=target_id,
+                    relationship_type=rel.relationship_type,
+                    description=rel.description,
+                    weight=rel.weight,
+                    source_chunks=rel.source_chunks,
+                )
+            )
+
+        self.relationships = self._deduplicate_relationships(remapped_relationships)
+        self._rebuild_entity_name_index()
+        return True
+
     def get_entity(self, entity_id: str) -> Entity | None:
         """Get entity by ID.
 
@@ -227,6 +271,45 @@ class KnowledgeGraph:
             Normalized name
         """
         return name.lower().strip()
+
+    def _rebuild_entity_name_index(self) -> None:
+        """Rebuild normalized name -> entity ID index."""
+        self.entity_name_index = {
+            self._normalize_name(entity.name): entity_id
+            for entity_id, entity in self.entities.items()
+        }
+
+    def _deduplicate_relationships(
+        self,
+        relationships: list[Relationship],
+    ) -> list[Relationship]:
+        """Deduplicate relationships after entity merges."""
+        deduped: dict[tuple[str, str, str, str], Relationship] = {}
+        for rel in relationships:
+            key = (
+                rel.source_entity_id,
+                rel.target_entity_id,
+                rel.relationship_type,
+                rel.description.strip().lower(),
+            )
+            existing = deduped.get(key)
+            if not existing:
+                deduped[key] = Relationship(
+                    source_entity_id=rel.source_entity_id,
+                    target_entity_id=rel.target_entity_id,
+                    relationship_type=rel.relationship_type,
+                    description=rel.description,
+                    weight=rel.weight,
+                    source_chunks=list(rel.source_chunks),
+                )
+                continue
+
+            existing.weight += rel.weight
+            existing.source_chunks = list(
+                set(existing.source_chunks + rel.source_chunks)
+            )
+
+        return list(deduped.values())
 
     def to_dict(self) -> dict:
         """Convert graph to dictionary."""

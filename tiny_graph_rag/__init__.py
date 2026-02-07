@@ -6,7 +6,7 @@ from pathlib import Path
 from .chunking import TextChunker
 from .config import Config
 from .extraction import EntityRelationshipExtractor
-from .graph import GraphBuilder, GraphStorage, KnowledgeGraph
+from .graph import GraphBuilder, GraphStorage, KnowledgeGraph, LLMEntityResolver
 from .llm import OpenAIClient
 from .llm.prompts import RESPONSE_GENERATION_SYSTEM, build_response_prompt
 from .retrieval import GraphRetriever
@@ -31,7 +31,9 @@ class GraphRAG:
             overlap=self.config.chunk_overlap,
         )
         self.extractor = EntityRelationshipExtractor(self.llm_client)
-        self.graph_builder = GraphBuilder()
+        self.graph_builder = GraphBuilder(
+            resolver=LLMEntityResolver(self.llm_client)
+        )
         self.storage = GraphStorage()
         self.graph: KnowledgeGraph | None = None
         self.retriever: GraphRetriever | None = None

@@ -15,6 +15,7 @@ class Entity:
     entity_id: str = field(default_factory=lambda: str(uuid.uuid4()))
     attributes: dict = field(default_factory=dict)
     source_chunks: list[str] = field(default_factory=list)
+    aliases: list[str] = field(default_factory=list)
 
     def merge_with(self, other: "Entity") -> "Entity":
         """Merge this entity with another entity.
@@ -32,6 +33,14 @@ class Entity:
         merged_attributes = {**self.attributes, **other.attributes}
         merged_chunks = list(set(self.source_chunks + other.source_chunks))
 
+        # Collect aliases: keep existing aliases and add other's name + aliases
+        merged_aliases = list(self.aliases)
+        if other.name != self.name and other.name not in merged_aliases:
+            merged_aliases.append(other.name)
+        for alias in other.aliases:
+            if alias != self.name and alias not in merged_aliases:
+                merged_aliases.append(alias)
+
         return Entity(
             name=self.name,
             entity_type=self.entity_type,
@@ -39,11 +48,12 @@ class Entity:
             entity_id=self.entity_id,
             attributes=merged_attributes,
             source_chunks=merged_chunks,
+            aliases=merged_aliases,
         )
 
     def to_dict(self) -> dict:
         """Convert entity to dictionary."""
-        return {
+        data = {
             "entity_id": self.entity_id,
             "name": self.name,
             "entity_type": self.entity_type,
@@ -51,6 +61,9 @@ class Entity:
             "attributes": self.attributes,
             "source_chunks": self.source_chunks,
         }
+        if self.aliases:
+            data["aliases"] = self.aliases
+        return data
 
     @classmethod
     def from_dict(cls, data: dict) -> "Entity":
@@ -62,6 +75,7 @@ class Entity:
             description=data.get("description", ""),
             attributes=data.get("attributes", {}),
             source_chunks=data.get("source_chunks", []),
+            aliases=data.get("aliases", []),
         )
 
 
@@ -129,9 +143,23 @@ class KnowledgeGraph:
             self.entities[existing_id] = existing.merge_with(entity)
             return existing_id
 
+        # Check if any of the entity's aliases match an existing entity
+        for alias in entity.aliases:
+            normalized_alias = self._normalize_name(alias)
+            if normalized_alias in self.entity_name_index:
+                existing_id = self.entity_name_index[normalized_alias]
+                existing = self.entities[existing_id]
+                self.entities[existing_id] = existing.merge_with(entity)
+                self.entity_name_index[normalized_name] = existing_id
+                return existing_id
+
         # Add new entity
         self.entities[entity.entity_id] = entity
         self.entity_name_index[normalized_name] = entity.entity_id
+        for alias in entity.aliases:
+            normalized_alias = self._normalize_name(alias)
+            if normalized_alias not in self.entity_name_index:
+                self.entity_name_index[normalized_alias] = entity.entity_id
         return entity.entity_id
 
     def add_relationship(self, relationship: Relationship) -> None:
@@ -273,11 +301,14 @@ class KnowledgeGraph:
         return name.lower().strip()
 
     def _rebuild_entity_name_index(self) -> None:
-        """Rebuild normalized name -> entity ID index."""
-        self.entity_name_index = {
-            self._normalize_name(entity.name): entity_id
-            for entity_id, entity in self.entities.items()
-        }
+        """Rebuild normalized name -> entity ID index including aliases."""
+        self.entity_name_index = {}
+        for entity_id, entity in self.entities.items():
+            self.entity_name_index[self._normalize_name(entity.name)] = entity_id
+            for alias in entity.aliases:
+                normalized_alias = self._normalize_name(alias)
+                if normalized_alias not in self.entity_name_index:
+                    self.entity_name_index[normalized_alias] = entity_id
 
     def _deduplicate_relationships(
         self,
@@ -328,7 +359,8 @@ class KnowledgeGraph:
         for eid, entity_data in data.get("entities", {}).items():
             entity = Entity.from_dict(entity_data)
             graph.entities[eid] = entity
-            graph.entity_name_index[graph._normalize_name(entity.name)] = eid
+
+        graph._rebuild_entity_name_index()
 
         for rel_data in data.get("relationships", []):
             graph.relationships.append(Relationship.from_dict(rel_data))

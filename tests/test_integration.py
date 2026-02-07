@@ -6,6 +6,7 @@ from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import pytest
+from unittest.mock import AsyncMock
 
 from tiny_graph_rag import Config, GraphRAG
 from tiny_graph_rag.graph import Entity, KnowledgeGraph, Relationship
@@ -94,6 +95,7 @@ class TestGraphRAGWithMocks:
                 }
 
         mock.chat_json.side_effect = chat_json_side_effect
+        mock.async_chat_json = AsyncMock(side_effect=chat_json_side_effect)
 
         # Mock query response
         mock.chat.return_value = "Alice is a scientist who works at Research Lab."

@@ -1,11 +1,11 @@
 """Tests for entity and relationship extraction."""
 
 import pytest
+from unittest.mock import AsyncMock, Mock
 
 from tiny_graph_rag.chunking.chunker import Chunk
 from tiny_graph_rag.extraction.extractor import EntityRelationshipExtractor
 from tiny_graph_rag.extraction.parser import ExtractionParser
-from tiny_graph_rag.graph import Entity, Relationship
 from tiny_graph_rag.llm.client import OpenAIClient
 
 
@@ -154,7 +154,7 @@ class TestAsyncExtractor:
     """Tests for async extraction methods."""
 
     @pytest.mark.asyncio
-    async def test_async_extract_batch(self, mocker):
+    async def test_async_extract_batch(self):
         """Test async batch extraction with mocked LLM client."""
         # Mock the async_chat_json method
         mock_response = {
@@ -164,8 +164,8 @@ class TestAsyncExtractor:
             "relationships": [],
         }
 
-        mock_client = mocker.Mock(spec=OpenAIClient)
-        mock_client.async_chat_json = mocker.AsyncMock(return_value=mock_response)
+        mock_client = Mock(spec=OpenAIClient)
+        mock_client.async_chat_json = AsyncMock(return_value=mock_response)
 
         extractor = EntityRelationshipExtractor(mock_client)
 

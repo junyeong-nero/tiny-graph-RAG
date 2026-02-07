@@ -1,0 +1,34 @@
+{"id": "이상-날개_hard_alias_001", "query": "'니코틴' 인물/개체는 어떤 존재야?", "reference_entities": ["니코틴"], "ground_truth": "A substance that affects the mind and body.", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_alias_002", "query": "'파라독스' 인물/개체는 어떤 존재야?", "reference_entities": ["파라독스"], "ground_truth": "Paradox, a statement that contradicts itself.", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_alias_003", "query": "'19세기' 인물/개체는 어떤 존재야?", "reference_entities": ["19세기"], "ground_truth": "The 19th century, a historical period.", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_alias_004", "query": "'도스토예프스키' 인물/개체는 어떤 존재야?", "reference_entities": ["도스토예프스키"], "ground_truth": "Fyodor Dostoevsky, a Russian novelist.", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_alias_005", "query": "'프랑스' 인물/개체는 어떤 존재야?", "reference_entities": ["프랑스"], "ground_truth": "Country in Western Europe.", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_alias_006", "query": "'여왕봉' 인물/개체는 어떤 존재야?", "reference_entities": ["여왕봉"], "ground_truth": "A reference to a queen or a prominent woman.", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_alias_007", "query": "'미망인' 인물/개체는 어떤 존재야?", "reference_entities": ["미망인"], "ground_truth": "Refers to a widow.", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_alias_008", "query": "'33번지' 인물/개체는 어떤 존재야?", "reference_entities": ["33번지"], "ground_truth": "An address representing a location with 18 households. The location where the narrator and his wife live", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_alias_009", "query": "'18가구' 인물/개체는 어떤 존재야?", "reference_entities": ["18가구"], "ground_truth": "Refers to the 18 households living at 33번지.", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_alias_010", "query": "'장사치' 인물/개체는 어떤 존재야?", "reference_entities": ["장사치"], "ground_truth": "Refers to merchants or traders.", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_alias_011", "query": "내아내 인물/개체는 어떤 존재야?", "reference_entities": ["내 아내"], "ground_truth": "The narrator's wife, described as beautiful and precious.", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_alias_012", "query": "33번지18가구 인물/개체는 어떤 존재야?", "reference_entities": ["33번 지 18 가구"], "ground_truth": "A specific location mentioned where the narrator and his wife live.", "tags": ["hard", "alias-noise"]}
+{"id": "이상-날개_hard_multihop_001", "query": "33번 지 18 가구와 돈 오 원 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "돈 오 원"], "ground_truth": "33번 지 18 가구와 돈 오 원는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_multihop_002", "query": "33번 지 18 가구와 볕 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "볕"], "ground_truth": "33번 지 18 가구와 볕는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_multihop_003", "query": "33번 지 18 가구와 체취 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "체취"], "ground_truth": "33번 지 18 가구와 체취는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_multihop_004", "query": "33번 지 18 가구와 저녁 밥상 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "저녁 밥상"], "ground_truth": "33번 지 18 가구와 저녁 밥상는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_multihop_005", "query": "33번 지 18 가구와 화장품 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "화장품"], "ground_truth": "33번 지 18 가구와 화장품는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_multihop_006", "query": "33번 지 18 가구와 골덴양복 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "골덴양복"], "ground_truth": "33번 지 18 가구와 골덴양복는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_multihop_007", "query": "33번 지 18 가구와 빈대 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "빈대"], "ground_truth": "33번 지 18 가구와 빈대는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_multihop_008", "query": "33번 지 18 가구와 아스피린 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "아스피린"], "ground_truth": "33번 지 18 가구와 아스피린는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_multihop_009", "query": "33번 지 18 가구와 밥 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "밥"], "ground_truth": "33번 지 18 가구와 밥는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_multihop_010", "query": "33번 지 18 가구와 우리집 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "우리집"], "ground_truth": "33번 지 18 가구와 우리집는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_multihop_011", "query": "33번 지 18 가구와 자정 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "자정"], "ground_truth": "33번 지 18 가구와 자정는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_multihop_012", "query": "33번 지 18 가구와 33번지 사이의 연결 고리를 설명해줘.", "reference_entities": ["33번 지 18 가구", "33번지"], "ground_truth": "33번 지 18 가구와 33번지는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "이상-날개_hard_amb_001", "query": "문맥에서 '박제'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["박제"], "ground_truth": "'박제'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "이상-날개_hard_amb_002", "query": "문맥에서 '위트'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["위트"], "ground_truth": "'위트'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "이상-날개_hard_amb_003", "query": "문맥에서 '위고'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["위고"], "ground_truth": "'위고'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "이상-날개_hard_amb_004", "query": "문맥에서 '대문'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["대문"], "ground_truth": "'대문'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "이상-날개_hard_amb_005", "query": "문맥에서 '방'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["방"], "ground_truth": "'방'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "이상-날개_hard_amb_006", "query": "문맥에서 '꽃'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["꽃"], "ground_truth": "'꽃'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "이상-날개_hard_amb_007", "query": "문맥에서 '아내'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["아내"], "ground_truth": "'아내'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "이상-날개_hard_amb_008", "query": "문맥에서 '윗방'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["윗방"], "ground_truth": "'윗방'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "이상-날개_hard_amb_009", "query": "문맥에서 '들창'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["들창"], "ground_truth": "'들창'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "이상-날개_hard_amb_010", "query": "문맥에서 '거울'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["거울"], "ground_truth": "'거울'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}

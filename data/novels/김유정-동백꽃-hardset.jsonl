@@ -1,0 +1,34 @@
+{"id": "김유정-동백꽃_hard_alias_001", "query": "'김유정' 인물/개체는 어떤 존재야?", "reference_entities": ["김유정"], "ground_truth": "A person mentioned in the text, possibly the narrator.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_alias_002", "query": "점순네수탉 인물/개체는 어떤 존재야?", "reference_entities": ["점순네 수탉"], "ground_truth": "A rooster belonging to a character named 점순.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_alias_003", "query": "'대강이' 인물/개체는 어떤 존재야?", "reference_entities": ["대강이"], "ground_truth": "The narrator's rooster.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_alias_004", "query": "'계집애' 인물/개체는 어떤 존재야?", "reference_entities": ["계집애"], "ground_truth": "A girl mentioned in the text, possibly related to the narrator. A derogatory term used for a girl, likely referring to 점순이.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_alias_005", "query": "남울타리 인물/개체는 어떤 존재야?", "reference_entities": ["남 울타리"], "ground_truth": "A fence mentioned in the context of the girl's actions.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_alias_006", "query": "우리어머니 인물/개체는 어떤 존재야?", "reference_entities": ["우리 어머니"], "ground_truth": "The narrator's mother.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_alias_007", "query": "우리아버지 인물/개체는 어떤 존재야?", "reference_entities": ["우리 아버지"], "ground_truth": "The narrator's father.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_alias_008", "query": "'점순이' 인물/개체는 어떤 존재야?", "reference_entities": ["점순이"], "ground_truth": "A character involved in a conflict over chickens. A character who observes the rooster fight. A character who reacts to the situation with surprise and humor. A character who plays the 호드기 and is involved in the conflict.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_alias_009", "query": "'아버지' 인물/개체는 어떤 존재야?", "reference_entities": ["아버지"], "ground_truth": "The narrator's father, mentioned in a derogatory context. The narrator's father, who is mentioned in relation to the rooster.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_alias_010", "query": "우리수탉 인물/개체는 어떤 존재야?", "reference_entities": ["우리 수탉"], "ground_truth": "The narrator's rooster.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_alias_011", "query": "제집수탉 인물/개체는 어떤 존재야?", "reference_entities": ["제 집 수탉"], "ground_truth": "The rooster from another household.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_alias_012", "query": "'고추장' 인물/개체는 어떤 존재야?", "reference_entities": ["고추장"], "ground_truth": "Korean red pepper paste used to enhance the rooster's strength. A spicy red pepper paste used in Korean cuisine.", "tags": ["hard", "alias-noise"]}
+{"id": "김유정-동백꽃_hard_multihop_001", "query": "남 울타리와 고추장 사이의 연결 고리를 설명해줘.", "reference_entities": ["남 울타리", "고추장"], "ground_truth": "남 울타리와 고추장는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "김유정-동백꽃_hard_multihop_002", "query": "남 울타리와 우리 수탉 사이의 연결 고리를 설명해줘.", "reference_entities": ["남 울타리", "우리 수탉"], "ground_truth": "남 울타리와 우리 수탉는 그래프에서 3홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "3-hop"]}
+{"id": "김유정-동백꽃_hard_multihop_003", "query": "남 울타리와 닭 사이의 연결 고리를 설명해줘.", "reference_entities": ["남 울타리", "닭"], "ground_truth": "남 울타리와 닭는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "김유정-동백꽃_hard_multihop_004", "query": "남 울타리와 수탉 사이의 연결 고리를 설명해줘.", "reference_entities": ["남 울타리", "수탉"], "ground_truth": "남 울타리와 수탉는 그래프에서 3홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "3-hop"]}
+{"id": "김유정-동백꽃_hard_multihop_005", "query": "남 울타리와 제 집 수탉 사이의 연결 고리를 설명해줘.", "reference_entities": ["남 울타리", "제 집 수탉"], "ground_truth": "남 울타리와 제 집 수탉는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "김유정-동백꽃_hard_multihop_006", "query": "남 울타리와 점순네 수탉 사이의 연결 고리를 설명해줘.", "reference_entities": ["남 울타리", "점순네 수탉"], "ground_truth": "남 울타리와 점순네 수탉는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "김유정-동백꽃_hard_multihop_007", "query": "남 울타리와 순이 사이의 연결 고리를 설명해줘.", "reference_entities": ["남 울타리", "순이"], "ground_truth": "남 울타리와 순이는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "김유정-동백꽃_hard_multihop_008", "query": "남 울타리와 대강이 사이의 연결 고리를 설명해줘.", "reference_entities": ["남 울타리", "대강이"], "ground_truth": "남 울타리와 대강이는 그래프에서 3홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "3-hop"]}
+{"id": "김유정-동백꽃_hard_multihop_009", "query": "남 울타리와 호드기 사이의 연결 고리를 설명해줘.", "reference_entities": ["남 울타리", "호드기"], "ground_truth": "남 울타리와 호드기는 그래프에서 3홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "3-hop"]}
+{"id": "김유정-동백꽃_hard_multihop_010", "query": "남 울타리와 밭 사이의 연결 고리를 설명해줘.", "reference_entities": ["남 울타리", "밭"], "ground_truth": "남 울타리와 밭는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "김유정-동백꽃_hard_multihop_011", "query": "점순이와 점순 사이의 연결 고리를 설명해줘.", "reference_entities": ["점순이", "점순"], "ground_truth": "점순이와 점순는 그래프에서 3홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "3-hop"]}
+{"id": "김유정-동백꽃_hard_multihop_012", "query": "점순이와 우리 어머니 사이의 연결 고리를 설명해줘.", "reference_entities": ["점순이", "우리 어머니"], "ground_truth": "점순이와 우리 어머니는 그래프에서 4홉 이내로 연결된다.", "tags": ["hard", "multi-hop", "4-hop"]}
+{"id": "김유정-동백꽃_hard_amb_001", "query": "문맥에서 '감자'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["감자"], "ground_truth": "'감자'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "김유정-동백꽃_hard_amb_002", "query": "문맥에서 '점순'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["점순"], "ground_truth": "'점순'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "김유정-동백꽃_hard_amb_003", "query": "문맥에서 '동리'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["동리"], "ground_truth": "'동리'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "김유정-동백꽃_hard_amb_004", "query": "문맥에서 '우리'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["우리"], "ground_truth": "'우리'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "김유정-동백꽃_hard_amb_005", "query": "문맥에서 '마름'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["마름"], "ground_truth": "'마름'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "김유정-동백꽃_hard_amb_006", "query": "문맥에서 '닭'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["닭"], "ground_truth": "'닭'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "김유정-동백꽃_hard_amb_007", "query": "문맥에서 '집'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["집"], "ground_truth": "'집'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "김유정-동백꽃_hard_amb_008", "query": "문맥에서 '봉당'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["봉당"], "ground_truth": "'봉당'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "김유정-동백꽃_hard_amb_009", "query": "문맥에서 '수탉'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["수탉"], "ground_truth": "'수탉'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}
+{"id": "김유정-동백꽃_hard_amb_010", "query": "문맥에서 '아버지'가 누구(무엇)를 가리키는지 설명해줘.", "reference_entities": ["아버지"], "ground_truth": "'아버지'의 지시 대상 해석", "tags": ["hard", "ambiguous-token"]}

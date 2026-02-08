@@ -55,3 +55,8 @@
 - 평가 결과 공유 시 `--top-k`, `--hops`, `--skip-generation` 설정값 명시
 
 평가셋/실행 상세는 `docs/evaluation.md` 참고.
+
+## 6) 추가 문서
+
+- 평가 실행 가이드: `docs/evaluation.md`
+- 엔티티 병합(Entity Resolution) 동작 상세: `docs/entity-resolution.md`

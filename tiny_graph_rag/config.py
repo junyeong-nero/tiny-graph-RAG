@@ -6,6 +6,9 @@ from pathlib import Path
 from typing import Optional
 
 import yaml
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def _env_or_default(env_name: str, default_value: object) -> str:

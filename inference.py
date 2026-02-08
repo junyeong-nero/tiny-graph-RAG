@@ -3,7 +3,7 @@ from tiny_graph_rag import GraphRAG
 
 # Paths
 DOCUMENT_PATH = "data/novels/김유정-동백꽃.txt"
-GRAPH_PATH = "data/novels/김유정-동백꽃-KG.json"
+GRAPH_PATH = "data/kg/김유정-동백꽃-KG.json"
 
 # Initialize the system
 rag = GraphRAG()

@@ -169,11 +169,11 @@ def create_subgraph_data(
             relevant_rels.append(rel)
 
     subgraph_ids = {center_entity_id} | neighbor_ids
-    subgraph_entities = {
-        eid: graph.get_entity(eid)
-        for eid in subgraph_ids
-        if graph.get_entity(eid) is not None
-    }
+    subgraph_entities = {}
+    for eid in subgraph_ids:
+        entity = graph.get_entity(eid)
+        if entity is not None:
+            subgraph_entities[eid] = entity
 
     degrees = _compute_degrees(graph, subgraph_entities)
 
@@ -284,7 +284,7 @@ def render_sidebar():
 
         graph_path = st.text_input(
             "Graph JSON Path",
-            value="data/novels/현진건-운수좋은날-KG.json",
+            value="data/kg/현진건-운수좋은날-KG.json",
             help="Path to the knowledge graph JSON file",
         )
 
@@ -389,7 +389,7 @@ def render_graph_view(graph: KnowledgeGraph, selected_types: list[str], max_node
     st.caption(f"{len(nodes)} entities / {len(edges)} relationships")
 
     config = Config(
-        width="100%",
+        width=1100,
         height=700,
         directed=True,
         physics=True,
@@ -511,7 +511,6 @@ def render_entity_list(graph: KnowledgeGraph, selected_types: list[str]):
 
     display_limit = 50
     for entity in filtered[:display_limit]:
-        entity_color = ENTITY_COLORS.get(entity.entity_type, ENTITY_COLORS["OTHER"])
         type_label = ENTITY_LABELS_KO.get(entity.entity_type, entity.entity_type)
 
         with st.expander(f"{entity.name}  [{type_label}]"):

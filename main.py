@@ -2,12 +2,24 @@
 
 import argparse
 import sys
+from pathlib import Path
 
 from tiny_graph_rag import GraphRAG
+from tiny_graph_rag.config import Config
+
+
+def resolve_path(path_value: str, base_dir: str | None) -> str:
+    """Resolve path under base_dir when path is relative."""
+    path = Path(path_value)
+    if not base_dir or path.is_absolute():
+        return str(path)
+    return str(Path(base_dir) / path)
 
 
 def main():
     """Main entry point for the CLI."""
+    storage_defaults = Config.load_storage_config()
+
     parser = argparse.ArgumentParser(
         description="Tiny-Graph-RAG: Graph-based Retrieval Augmented Generation"
     )
@@ -19,6 +31,11 @@ def main():
     process_parser.add_argument(
         "-o", "--output", default="graph.json", help="Output path for the graph (default: graph.json)"
     )
+    process_parser.add_argument(
+        "--kg-dir",
+        default=storage_defaults["kg_dir"],
+        help="Base directory for relative graph output paths",
+    )
 
     # Query command
     query_parser = subparsers.add_parser("query", help="Query the knowledge graph")
@@ -26,11 +43,21 @@ def main():
     query_parser.add_argument(
         "-g", "--graph", default="graph.json", help="Path to the graph file (default: graph.json)"
     )
+    query_parser.add_argument(
+        "--kg-dir",
+        default=storage_defaults["kg_dir"],
+        help="Base directory for relative graph paths",
+    )
 
     # Stats command
     stats_parser = subparsers.add_parser("stats", help="Show graph statistics")
     stats_parser.add_argument(
         "-g", "--graph", default="graph.json", help="Path to the graph file (default: graph.json)"
+    )
+    stats_parser.add_argument(
+        "--kg-dir",
+        default=storage_defaults["kg_dir"],
+        help="Base directory for relative graph paths",
     )
 
     # Interactive command
@@ -43,6 +70,11 @@ def main():
     interactive_parser.add_argument(
         "-g", "--graph", help="Path to existing graph file"
     )
+    interactive_parser.add_argument(
+        "--kg-dir",
+        default=storage_defaults["kg_dir"],
+        help="Base directory for relative graph paths",
+    )
 
     # Visualize command
     visualize_parser = subparsers.add_parser(
@@ -50,6 +82,11 @@ def main():
     )
     visualize_parser.add_argument(
         "-g", "--graph", required=True, help="Path to graph JSON file"
+    )
+    visualize_parser.add_argument(
+        "--kg-dir",
+        default=storage_defaults["kg_dir"],
+        help="Base directory for relative graph paths",
     )
     visualize_parser.add_argument(
         "-o", "--output", default="graph_viz.html", help="Output HTML file (default: graph_viz.html)"
@@ -72,7 +109,17 @@ def main():
         "--dataset", required=True, help="Path to evaluation dataset (JSONL)"
     )
     eval_parser.add_argument(
+        "--dataset-dir",
+        default=storage_defaults["dataset_dir"],
+        help="Base directory for relative dataset paths",
+    )
+    eval_parser.add_argument(
         "-g", "--graph", required=True, help="Path to graph JSON file"
+    )
+    eval_parser.add_argument(
+        "--kg-dir",
+        default=storage_defaults["kg_dir"],
+        help="Base directory for relative graph paths",
     )
     eval_parser.add_argument(
         "--top-k", type=int, default=5, help="Top-k entities for metrics (default: 5)"
@@ -83,6 +130,11 @@ def main():
     eval_parser.add_argument(
         "-o", "--output", default="eval_results.json",
         help="Output JSON file for results (default: eval_results.json)"
+    )
+    eval_parser.add_argument(
+        "--results-dir",
+        default=storage_defaults["results_dir"],
+        help="Base directory for relative evaluation output paths",
     )
     eval_parser.add_argument(
         "--skip-generation", action="store_true",
@@ -127,7 +179,8 @@ def run_process(args):
 
     rag = GraphRAG()
     rag.process_document(args.document)
-    rag.save_graph(args.output)
+    output_path = resolve_path(args.output, args.kg_dir)
+    rag.save_graph(output_path)
 
     stats = rag.get_stats()
     print("\nGraph statistics:")
@@ -140,7 +193,8 @@ def run_process(args):
 def run_query(args):
     """Query an existing graph."""
     rag = GraphRAG()
-    rag.load_graph(args.graph)
+    graph_path = resolve_path(args.graph, args.kg_dir)
+    rag.load_graph(graph_path)
 
     print(f"\nQuestion: {args.question}")
     print("-" * 50)
@@ -152,7 +206,8 @@ def run_query(args):
 def run_stats(args):
     """Show statistics for a graph."""
     rag = GraphRAG()
-    rag.load_graph(args.graph)
+    graph_path = resolve_path(args.graph, args.kg_dir)
+    rag.load_graph(graph_path)
 
     stats = rag.get_stats()
     print("Graph Statistics:")
@@ -176,7 +231,8 @@ def run_interactive(args):
 
     # Load or process
     if args.graph:
-        rag.load_graph(args.graph)
+        graph_path = resolve_path(args.graph, args.kg_dir)
+        rag.load_graph(graph_path)
     elif args.document:
         rag.process_document(args.document)
     else:
@@ -208,11 +264,12 @@ def run_visualize(args):
     from tiny_graph_rag.visualization import PyVisVisualizer
     from tiny_graph_rag.graph.storage import GraphStorage
 
-    print(f"Loading graph from: {args.graph}")
+    graph_path = resolve_path(args.graph, args.kg_dir)
+    print(f"Loading graph from: {graph_path}")
 
     # Load graph
     storage = GraphStorage()
-    graph = storage.load_json(args.graph)
+    graph = storage.load_json(graph_path)
 
     print(f"Graph loaded: {len(graph.entities)} entities, {len(graph.relationships)} relationships")
 
@@ -249,9 +306,13 @@ def run_eval(args):
     if args.price_per_1k_output < 0:
         raise ValueError("--price-per-1k-output must be >= 0")
 
-    print(f"Loading graph from: {args.graph}")
+    graph_path = resolve_path(args.graph, args.kg_dir)
+    dataset_path = resolve_path(args.dataset, args.dataset_dir)
+    output_path = resolve_path(args.output, args.results_dir)
+
+    print(f"Loading graph from: {graph_path}")
     storage = GraphStorage()
-    graph = storage.load_json(args.graph)
+    graph = storage.load_json(graph_path)
     print(f"Graph loaded: {len(graph.entities)} entities, {len(graph.relationships)} relationships")
 
     config = Config.from_env()
@@ -271,12 +332,12 @@ def run_eval(args):
         skip_generation=args.skip_generation,
     )
 
-    print(f"Running evaluation on: {args.dataset}")
+    print(f"Running evaluation on: {dataset_path}")
     print(f"  top_k={args.top_k}, hops={args.hops}")
-    results, summary = runner.run(args.dataset)
+    results, summary = runner.run(dataset_path)
 
-    save_eval_output(results, summary, args.output)
-    print(f"\nResults saved to: {args.output}")
+    save_eval_output(results, summary, output_path)
+    print(f"\nResults saved to: {output_path}")
 
     print(f"\n{'='*50}")
     print(f"Evaluation Summary ({summary.num_examples} examples, k={summary.k})")

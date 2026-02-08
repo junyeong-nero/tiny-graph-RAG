@@ -55,7 +55,17 @@ uv run python main.py eval \
   -o "김유정-동백꽃-eval-results.json"
 ```
 
-### 3.2 주요 옵션 설명
+### 3.2 고급 실행 (경로 지정)
+다른 폴더에 있는 데이터셋이나 그래프를 사용할 경우:
+```bash
+uv run python main.py eval \
+  --dataset-dir "custom_data/eval" \
+  --dataset "test-set.jsonl" \
+  --kg-dir "custom_data/kg" \
+  --results-dir "custom_data/results"
+```
+
+### 3.3 주요 옵션 설명
 - `--top-k`: 메트릭 계산 시 기준이 되는 상위 `k`값 (기본값: 5)
 - `--hops`: BFS 탐색 깊이 (기본값: 2). 하드셋 평가 시 3~4로 설정을 권장합니다.
 - `--skip-generation`: 답변 생성을 생략하고 검색(Retrieval) 품질만 측정하여 비용을 절감합니다.

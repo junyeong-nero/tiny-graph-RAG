@@ -38,6 +38,8 @@ Tiny-Graph-RAG는 OpenAI API를 사용하여 텍스트에서 엔티티와 관계
 ```
 
 상세한 모듈별 설명은 [docs/README.md](docs/README.md)를 참고하세요.
+- [Chunking 가이드](docs/chunking.md)
+- [Entity Resolution 가이드](docs/entity-resolution.md)
 
 ## 시작하기 (Getting Started)
 
@@ -77,6 +79,12 @@ uv run python main.py visualize -g "김유정-동백꽃-KG.json" -o graph_viz.ht
 ### 4. Streamlit Web UI
 ```bash
 uv run streamlit run streamlit_app.py
+```
+
+### 5. Entity Resolution 일괄 적용 (Batch)
+기존에 생성된 모든 그래프(`data/kg/*.json`)에 대해 ER을 재적용합니다.
+```bash
+uv run python scripts/apply_er.py
 ```
 
 ## 평가 (Evaluation)

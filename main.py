@@ -149,6 +149,9 @@ def main():
         help="USD per 1000 output tokens (default: 0.0006)",
     )
 
+    # App command
+    subparsers.add_parser("app", help="Launch the Streamlit web UI")
+
     args = parser.parse_args()
 
     if not args.command:
@@ -168,6 +171,8 @@ def main():
             run_visualize(args)
         elif args.command == "eval":
             run_eval(args)
+        elif args.command == "app":
+            run_app()
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
@@ -351,6 +356,15 @@ def run_eval(args):
     print(f"    Prompt:           {summary.total_prompt_tokens}")
     print(f"    Completion:       {summary.total_completion_tokens}")
     print(f"  Estimated Cost:     ${summary.total_estimated_cost_usd:.6f}")
+
+
+def run_app():
+    """Launch the Streamlit web UI."""
+    import subprocess
+    from pathlib import Path
+
+    app_path = Path(__file__).parent / "src" / "streamlit_app.py"
+    subprocess.run(["streamlit", "run", str(app_path)], check=True)
 
 
 if __name__ == "__main__":

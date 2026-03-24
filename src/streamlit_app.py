@@ -6,6 +6,7 @@ from streamlit_agraph import agraph, Node, Edge, Config
 from tiny_graph_rag import GraphRAG
 from tiny_graph_rag.graph.storage import GraphStorage
 from tiny_graph_rag.graph.models import KnowledgeGraph
+from tiny_graph_rag.visualization import PyVisVisualizer
 
 
 ENTITY_COLORS = {
@@ -354,6 +355,12 @@ def render_stats(stats_placeholder, graph: KnowledgeGraph):
             )
 
 
+def generate_graph_html(graph: KnowledgeGraph, filter_types: list[str], max_nodes: int) -> str:
+    viz = PyVisVisualizer(graph=graph, filter_types=filter_types or None, max_nodes=max_nodes)
+    viz.generate()
+    return viz.network.generate_html()
+
+
 def render_graph_view(graph: KnowledgeGraph, selected_types: list[str], max_nodes: int):
     render_legend()
 
@@ -386,7 +393,17 @@ def render_graph_view(graph: KnowledgeGraph, selected_types: list[str], max_node
         st.warning("No entities match the current filters.")
         return
 
-    st.caption(f"{len(nodes)} entities / {len(edges)} relationships")
+    col_caption, col_download = st.columns([5, 1])
+    with col_caption:
+        st.caption(f"{len(nodes)} entities / {len(edges)} relationships")
+    with col_download:
+        html_content = generate_graph_html(graph, selected_types, max_nodes)
+        st.download_button(
+            label="Download HTML",
+            data=html_content,
+            file_name="graph.html",
+            mime="text/html",
+        )
 
     config = Config(
         width=1100,

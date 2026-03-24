@@ -76,31 +76,6 @@ def main():
         help="Base directory for relative graph paths",
     )
 
-    # Visualize command
-    visualize_parser = subparsers.add_parser(
-        "visualize", help="Visualize knowledge graph"
-    )
-    visualize_parser.add_argument(
-        "-g", "--graph", required=True, help="Path to graph JSON file"
-    )
-    visualize_parser.add_argument(
-        "--kg-dir",
-        default=storage_defaults["kg_dir"],
-        help="Base directory for relative graph paths",
-    )
-    visualize_parser.add_argument(
-        "-o", "--output", default="graph_viz.html", help="Output HTML file (default: graph_viz.html)"
-    )
-    visualize_parser.add_argument(
-        "--filter-type", nargs="+", help="Filter by entity types (e.g., PERSON PLACE)"
-    )
-    visualize_parser.add_argument(
-        "--min-weight", type=float, default=0.0, help="Minimum relationship weight (default: 0.0)"
-    )
-    visualize_parser.add_argument(
-        "--max-nodes", type=int, default=200, help="Maximum nodes to display (default: 200)"
-    )
-
     # Eval command
     eval_parser = subparsers.add_parser(
         "eval", help="Evaluate retrieval quality against a dataset"
@@ -167,8 +142,6 @@ def main():
             run_stats(args)
         elif args.command == "interactive":
             run_interactive(args)
-        elif args.command == "visualize":
-            run_visualize(args)
         elif args.command == "eval":
             run_eval(args)
         elif args.command == "app":
@@ -263,36 +236,6 @@ def run_interactive(args):
         response = rag.query(question)
         print(f"\nAnswer: {response}")
 
-
-def run_visualize(args):
-    """Visualize a knowledge graph."""
-    from tiny_graph_rag.visualization import PyVisVisualizer
-    from tiny_graph_rag.graph.storage import GraphStorage
-
-    graph_path = resolve_path(args.graph, args.kg_dir)
-    print(f"Loading graph from: {graph_path}")
-
-    # Load graph
-    storage = GraphStorage()
-    graph = storage.load_json(graph_path)
-
-    print(f"Graph loaded: {len(graph.entities)} entities, {len(graph.relationships)} relationships")
-
-    # Create visualizer
-    viz = PyVisVisualizer(
-        graph=graph,
-        filter_types=args.filter_type,
-        min_weight=args.min_weight,
-        max_nodes=args.max_nodes,
-    )
-
-    # Generate and save
-    print("Generating visualization...")
-    viz.generate()
-    viz.save(args.output)
-
-    # Open in browser
-    viz.show()
 
 
 def run_eval(args):

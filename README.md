@@ -65,14 +65,10 @@ uv run python main.py process "data/novels/kim-camellia.txt" -o "kim-camellia-KG
 uv run python main.py query "Explain the relationship between Jeom-soon and the rooster." -g "kim-camellia-KG.json"
 ```
 
-### 3. Stats & Visualization
+### 3. Stats
 
 ```bash
-# Print graph stats
 uv run python main.py stats -g "kim-camellia-KG.json"
-
-# Generate interactive HTML visualization
-uv run python main.py visualize -g "kim-camellia-KG.json" -o graph_viz.html
 ```
 
 ### 4. Streamlit Web UI

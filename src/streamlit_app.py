@@ -9,13 +9,24 @@ from tiny_graph_rag.graph.models import KnowledgeGraph
 from tiny_graph_rag.visualization import PyVisVisualizer
 
 
+# ── Palette ───────────────────────────────────────────────────────────────────
+BG_BASE        = "#1A1A1A"
+BG_SURFACE     = "#242424"
+BG_CARD        = "#2E2E2E"
+BORDER_COLOR   = "#383838"
+TEXT_PRIMARY   = "#E0E0E0"
+TEXT_SECONDARY = "#9E9E9E"
+ACCENT         = "#7BB8D4"   # pastel blue — primary point colour
+ACCENT_LIGHT   = "#A8D4EC"
+ACCENT_BORDER  = "#5AA8CC"
+
 ENTITY_COLORS = {
-    "PERSON": "#4A90D9",
-    "ORGANIZATION": "#27AE60",
-    "PLACE": "#E67E22",
-    "CONCEPT": "#8E44AD",
-    "EVENT": "#C0392B",
-    "OTHER": "#7F8C8D",
+    "PERSON":       ACCENT,       # pastel blue
+    "ORGANIZATION": "#82C4A0",    # soft mint
+    "PLACE":        "#E8C07A",    # soft amber
+    "CONCEPT":      "#B8A0D4",    # soft lavender
+    "EVENT":        "#E89090",    # soft rose
+    "OTHER":        "#8C8C8C",    # mid grey
 }
 
 ENTITY_LABELS_KO = {
@@ -27,13 +38,161 @@ ENTITY_LABELS_KO = {
     "OTHER": "기타",
 }
 
-SELECTED_COLOR = "#F1C40F"
-SELECTED_BORDER_COLOR = "#F39C12"
+SELECTED_COLOR        = ACCENT_LIGHT
+SELECTED_BORDER_COLOR = ACCENT_BORDER
 
 EDGE_COLORS = {
-    "default": "#AAAAAA",
-    "highlight": "#E74C3C",
+    "default":   "#505050",
+    "highlight": ACCENT,
 }
+
+APP_CSS = f"""
+<style>
+/* ── Base ── */
+.stApp {{
+    background-color: {BG_BASE};
+    color: {TEXT_PRIMARY};
+}}
+
+/* ── Sidebar ── */
+[data-testid="stSidebar"] {{
+    background-color: {BG_SURFACE};
+    border-right: 1px solid {BORDER_COLOR};
+}}
+[data-testid="stSidebar"] * {{
+    color: {TEXT_PRIMARY} !important;
+}}
+
+/* ── Header / Title ── */
+h1, h2, h3 {{
+    color: {TEXT_PRIMARY} !important;
+    font-weight: 600;
+}}
+h1 {{ letter-spacing: -0.5px; }}
+
+/* ── Tabs ── */
+[data-testid="stTabs"] [role="tablist"] {{
+    border-bottom: 1px solid {BORDER_COLOR};
+    gap: 4px;
+}}
+[data-testid="stTabs"] [role="tab"] {{
+    color: {TEXT_SECONDARY} !important;
+    background: transparent;
+    border-radius: 6px 6px 0 0;
+    padding: 6px 16px;
+    font-size: 14px;
+}}
+[data-testid="stTabs"] [role="tab"][aria-selected="true"] {{
+    color: {ACCENT} !important;
+    border-bottom: 2px solid {ACCENT};
+    font-weight: 600;
+}}
+
+/* ── Buttons ── */
+[data-testid="stButton"] > button,
+[data-testid="stDownloadButton"] > button {{
+    background-color: {BG_CARD};
+    color: {TEXT_PRIMARY};
+    border: 1px solid {BORDER_COLOR};
+    border-radius: 6px;
+    transition: border-color 0.15s, color 0.15s;
+}}
+[data-testid="stButton"] > button:hover,
+[data-testid="stDownloadButton"] > button:hover {{
+    border-color: {ACCENT};
+    color: {ACCENT};
+    background-color: {BG_CARD};
+}}
+[data-testid="stButton"] > button[kind="primary"] {{
+    background-color: {ACCENT};
+    color: #111;
+    border: none;
+    font-weight: 600;
+}}
+[data-testid="stButton"] > button[kind="primary"]:hover {{
+    background-color: {ACCENT_LIGHT};
+    color: #111;
+}}
+
+/* ── Inputs ── */
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea {{
+    background-color: {BG_CARD};
+    color: {TEXT_PRIMARY};
+    border: 1px solid {BORDER_COLOR};
+    border-radius: 6px;
+}}
+[data-testid="stTextInput"] input:focus,
+[data-testid="stTextArea"] textarea:focus {{
+    border-color: {ACCENT};
+    box-shadow: 0 0 0 2px {ACCENT}33;
+}}
+
+/* ── Slider ── */
+[data-testid="stSlider"] [data-testid="stThumbValue"] {{
+    color: {ACCENT} !important;
+}}
+[data-testid="stSlider"] [role="slider"] {{
+    background-color: {ACCENT} !important;
+}}
+
+/* ── Multiselect ── */
+[data-testid="stMultiSelect"] [data-baseweb="select"] > div {{
+    background-color: {BG_CARD};
+    border-color: {BORDER_COLOR};
+}}
+[data-testid="stMultiSelect"] span[data-baseweb="tag"] {{
+    background-color: {ACCENT}33;
+    color: {ACCENT_LIGHT};
+}}
+
+/* ── Metrics ── */
+[data-testid="stMetric"] {{
+    background-color: {BG_CARD};
+    border: 1px solid {BORDER_COLOR};
+    border-radius: 8px;
+    padding: 12px 16px;
+}}
+[data-testid="stMetricValue"] {{
+    color: {ACCENT} !important;
+    font-size: 1.6rem !important;
+    font-weight: 700;
+}}
+[data-testid="stMetricLabel"] {{
+    color: {TEXT_SECONDARY} !important;
+    font-size: 12px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}}
+
+/* ── Expander ── */
+[data-testid="stExpander"] {{
+    background-color: {BG_CARD};
+    border: 1px solid {BORDER_COLOR} !important;
+    border-radius: 8px;
+}}
+[data-testid="stExpander"] summary {{
+    color: {TEXT_PRIMARY} !important;
+}}
+
+/* ── Alerts ── */
+[data-testid="stAlert"] {{
+    background-color: {BG_CARD};
+    border-color: {BORDER_COLOR};
+    color: {TEXT_PRIMARY};
+}}
+
+/* ── Divider ── */
+hr {{
+    border-color: {BORDER_COLOR} !important;
+}}
+
+/* ── Caption ── */
+[data-testid="stCaptionContainer"] p {{
+    color: {TEXT_SECONDARY} !important;
+}}
+</style>
+"""
 
 
 def load_graph(graph_path: str) -> KnowledgeGraph:
@@ -128,7 +287,7 @@ def create_agraph_data(
                 shape="dot",
                 borderWidth=2,
                 borderWidthSelected=3,
-                font={"size": 14, "color": "#EEEEEE", "strokeWidth": 3, "strokeColor": "#333333"},
+                font={"size": 14, "color": TEXT_PRIMARY, "strokeWidth": 3, "strokeColor": BG_BASE},
             )
         )
 
@@ -144,7 +303,7 @@ def create_agraph_data(
                     color=EDGE_COLORS["default"],
                     title=edge_title,
                     width=1.5,
-                    font={"size": 8, "color": "#666666", "strokeWidth": 0, "align": "middle"},
+                    font={"size": 8, "color": TEXT_SECONDARY, "strokeWidth": 0, "align": "middle"},
                 )
             )
 
@@ -209,7 +368,7 @@ def create_subgraph_data(
                 shape="dot",
                 borderWidth=3 if is_center else 2,
                 borderWidthSelected=3,
-                font={"size": 16 if is_center else 14, "color": "#EEEEEE", "strokeWidth": 3, "strokeColor": "#333333"},
+                font={"size": 16 if is_center else 14, "color": TEXT_PRIMARY, "strokeWidth": 3, "strokeColor": BG_BASE},
             )
         )
 
@@ -225,7 +384,7 @@ def create_subgraph_data(
                     color=EDGE_COLORS["default"],
                     title=edge_title,
                     width=2,
-                    font={"size": 11, "color": "#BBBBBB", "strokeWidth": 2, "strokeColor": "#333333", "align": "middle"},
+                    font={"size": 11, "color": TEXT_SECONDARY, "strokeWidth": 2, "strokeColor": BG_BASE, "align": "middle"},
                 )
             )
 
@@ -325,10 +484,10 @@ def render_legend():
     for col, (etype, color) in zip(cols, ENTITY_COLORS.items()):
         label = ENTITY_LABELS_KO.get(etype, etype)
         col.markdown(
-            f"<span style='display:inline-block;width:12px;height:12px;"
+            f"<span style='display:inline-block;width:10px;height:10px;"
             f"border-radius:50%;background:{color};margin-right:6px;"
             f"vertical-align:middle;'></span>"
-            f"<span style='font-size:13px;color:#DDD;vertical-align:middle;'>"
+            f"<span style='font-size:12px;color:{TEXT_SECONDARY};vertical-align:middle;'>"
             f"{label}</span>",
             unsafe_allow_html=True,
         )
@@ -451,8 +610,8 @@ def render_entity_detail_card(details: dict):
 
     if entity.aliases:
         alias_tags = " ".join(
-            f"<code style='background:#333;padding:2px 6px;border-radius:4px;"
-            f"font-size:12px;color:#DDD;'>{alias}</code>"
+            f"<code style='background:{BG_CARD};padding:2px 6px;border-radius:4px;"
+            f"font-size:12px;color:{TEXT_SECONDARY};border:1px solid {BORDER_COLOR};'>{alias}</code>"
             for alias in entity.aliases
         )
         st.markdown(f"Aliases: {alias_tags}", unsafe_allow_html=True)
@@ -604,9 +763,14 @@ def main():
         page_icon="🔗",
         layout="wide",
     )
+    st.markdown(APP_CSS, unsafe_allow_html=True)
 
-    st.title("Tiny-Graph-RAG Visualizer")
-    st.markdown("Interactive knowledge graph visualization and querying")
+    st.markdown(
+        f"<h1 style='margin-bottom:2px;'>Tiny-Graph-RAG Visualizer</h1>"
+        f"<p style='color:{TEXT_SECONDARY};margin-top:0;font-size:14px;'>"
+        f"Interactive knowledge graph visualization and querying</p>",
+        unsafe_allow_html=True,
+    )
 
     graph_path, load_button, selected_types, max_nodes, stats_placeholder = (
         render_sidebar()
@@ -645,9 +809,9 @@ def main():
 
     st.divider()
     st.markdown(
-        "<div style='text-align: center; color: #888; font-size: 12px;'>"
-        "Tiny-Graph-RAG Visualizer | Built with Streamlit"
-        "</div>",
+        f"<div style='text-align:center;color:{TEXT_SECONDARY};font-size:12px;'>"
+        f"Tiny-Graph-RAG Visualizer &nbsp;·&nbsp; Built with Streamlit"
+        f"</div>",
         unsafe_allow_html=True,
     )
 

@@ -124,6 +124,37 @@ def main():
         help="USD per 1000 output tokens (default: 0.0006)",
     )
 
+    # Visualize command
+    viz_parser = subparsers.add_parser("visualize", help="Generate a standalone HTML graph visualization")
+    viz_parser.add_argument(
+        "-g", "--graph", default="graph.json", help="Path to the graph file (default: graph.json)"
+    )
+    viz_parser.add_argument(
+        "--kg-dir",
+        default=storage_defaults["kg_dir"],
+        help="Base directory for relative graph paths",
+    )
+    viz_parser.add_argument(
+        "-o", "--output", default="graph.html", help="Output HTML file path (default: graph.html)"
+    )
+    viz_parser.add_argument(
+        "--filter-types", nargs="+",
+        metavar="TYPE",
+        help="Entity types to include (e.g. PERSON ORGANIZATION)",
+    )
+    viz_parser.add_argument(
+        "--min-weight", type=float, default=0.0,
+        help="Minimum relationship weight to display (default: 0.0)",
+    )
+    viz_parser.add_argument(
+        "--max-nodes", type=int, default=200,
+        help="Maximum number of nodes to embed (default: 200)",
+    )
+    viz_parser.add_argument(
+        "--no-open", action="store_true",
+        help="Save the file without opening it in a browser",
+    )
+
     # App command
     subparsers.add_parser("app", help="Launch the Streamlit web UI")
 
@@ -144,6 +175,8 @@ def main():
             run_interactive(args)
         elif args.command == "eval":
             run_eval(args)
+        elif args.command == "visualize":
+            run_visualize(args)
         elif args.command == "app":
             run_app()
     except Exception as e:
@@ -299,6 +332,30 @@ def run_eval(args):
     print(f"    Prompt:           {summary.total_prompt_tokens}")
     print(f"    Completion:       {summary.total_completion_tokens}")
     print(f"  Estimated Cost:     ${summary.total_estimated_cost_usd:.6f}")
+
+
+def run_visualize(args):
+    """Generate a standalone HTML graph visualization."""
+    from tiny_graph_rag.graph.storage import GraphStorage
+    from tiny_graph_rag.visualization import HtmlVisualizer
+
+    graph_path = resolve_path(args.graph, args.kg_dir)
+    print(f"Loading graph from: {graph_path}")
+
+    storage = GraphStorage()
+    graph = storage.load_json(graph_path)
+    print(f"Graph loaded: {len(graph.entities)} entities, {len(graph.relationships)} relationships")
+
+    viz = HtmlVisualizer(
+        graph,
+        filter_types=args.filter_types,
+        min_weight=args.min_weight,
+        max_nodes=args.max_nodes,
+    )
+    viz.save(args.output)
+
+    if not args.no_open:
+        viz.show()
 
 
 def run_app():

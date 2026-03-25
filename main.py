@@ -209,16 +209,14 @@ def run_interactive(args):
 
     # Load or process
     if args.graph:
-        graph_path = resolve_path(args.graph, args.kg_dir)
-        rag.load_graph(graph_path)
+        rag.load_graph(resolve_path(args.graph, args.kg_dir))
     elif args.document:
         rag.process_document(args.document)
     else:
         print("Error: Provide either a document or a graph file.", file=sys.stderr)
         sys.exit(1)
 
-    print("\nInteractive mode. Type 'quit' or 'exit' to stop.")
-    print("-" * 50)
+    print("\nInteractive mode. Type 'quit' or 'exit' to stop.\n" + "-" * 50)
 
     while True:
         try:

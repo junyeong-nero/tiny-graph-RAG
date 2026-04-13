@@ -1,21 +1,37 @@
 # Tiny-Graph-RAG
 
-A lightweight Graph RAG framework that builds knowledge graphs from text using the OpenAI API and constructs QA context through graph traversal.
+A lightweight Graph RAG framework that builds knowledge graphs from documents and answers questions through explicit graph traversal — no vector DB, no black-box embeddings.
 
-Instead of vector DB-based semantic search, it leverages explicit entity connections (BFS traversal + heuristic ranking) for transparent knowledge extraction and reasoning.
+Instead of semantic similarity search, it leverages structured entity connections (BFS traversal + heuristic ranking) for transparent, traceable knowledge retrieval.
 
 ---
 
-## Features
+## How It Works
 
-| Feature | Description |
-| :--- | :--- |
-| **Lightweight Storage** | Manages knowledge graphs as plain JSON files — no graph DB required |
-| **LLM-Powered Extraction** | Extracts entities, types, descriptions, and relationships from unstructured text via LLM |
-| **Advanced Retrieval** | Combines BFS subgraph expansion with heuristic ranking to capture relevant context |
-| **Entity Resolution** | Deduplicates entities (aliases, typos, etc.) using LLM-based merge logic |
-| **Evaluation Pipeline** | Measures retrieval quality with Precision, Recall, MRR, nDCG, and more |
-| **Visualization** | Renders the knowledge graph as an interactive HTML using Pyvis |
+The system runs in two phases: **Graph Building** (offline) and **Query Answering** (online).
+
+### Phase 1 — Build
+
+```
+Document
+  └─► TextChunker          overlapping text segments (configurable size & overlap)
+        └─► EntityRelationshipExtractor   LLM extracts entities + relationships as JSON
+              └─► GraphBuilder            deduplicates & merges into a KnowledgeGraph
+                    └─► KnowledgeGraph    persisted as a plain JSON file
+```
+
+### Phase 2 — Query
+
+```
+User Query
+  └─► Entity Extraction    LLM identifies which entities the query mentions
+        └─► Anchor Matching    exact + fuzzy lookup against the graph
+              └─► BFS Expansion   hop N steps outward to collect a subgraph
+                    └─► Heuristic Ranking   score & filter to Top-K relevant nodes
+                          └─► LLM Answer Generator   context-aware response
+```
+
+> **Why graphs instead of vectors?** Every retrieved fact traces back to an explicit entity-relationship path. You can inspect exactly which nodes and edges informed the answer.
 
 ---
 
@@ -31,10 +47,37 @@ flowchart TD
     F --> G[LLM Answer Generator\nContext-aware response]
 ```
 
-For detailed module descriptions, see [docs/README.md](docs/README.md)
+### Module Overview
 
-- [Chunking Guide](docs/chunking.md)
-- [Entity Resolution Guide](docs/entity-resolution.md)
+| Module | Responsibility | Key Classes |
+| :--- | :--- | :--- |
+| `chunking/` | Split documents into overlapping segments | `TextChunker`, `Chunk` |
+| `extraction/` | LLM-powered entity & relationship extraction | `EntityRelationshipExtractor`, `ExtractionResult` |
+| `graph/` | Graph construction, entity resolution, JSON storage | `GraphBuilder`, `KnowledgeGraph`, `Entity`, `Relationship` |
+| `retrieval/` | Query entity extraction, BFS traversal, ranking | `GraphRetriever`, `GraphTraversal`, `SubgraphRanker` |
+| `llm/` | OpenAI API client & prompt templates | `OpenAIClient` |
+| `evaluation/` | Retrieval quality measurement | `EvaluationRunner`, `EvalMetrics` |
+| `visualization/` | Interactive graph rendering via Pyvis | `PyVisVisualizer` |
+
+### Entity Resolution
+
+After extraction, entities with different surface forms that refer to the same real-world object (e.g. aliases, typos, pronouns) are merged into a single canonical node. This keeps the graph dense and consistent.
+
+See [Entity Resolution Guide](docs/entity-resolution.md) for details.
+
+---
+
+## Features
+
+| Feature | Description |
+| :--- | :--- |
+| **Lightweight Storage** | Knowledge graphs stored as plain JSON — no graph DB required |
+| **LLM-Powered Extraction** | Extracts entities, types, descriptions, and relationships from unstructured text |
+| **Advanced Retrieval** | BFS subgraph expansion + heuristic ranking to surface relevant context |
+| **Entity Resolution** | LLM-based deduplication of aliases, typos, and alternate names |
+| **Evaluation Pipeline** | Measures retrieval quality with Precision, Recall, MRR, nDCG, latency, and cost |
+| **Visualization** | Interactive HTML graph via Pyvis |
+| **OpenAI-Compatible** | Works with any OpenAI-compatible endpoint (Azure, Ollama, vLLM, etc.) |
 
 ---
 
@@ -47,13 +90,15 @@ uv sync
 export OPENAI_API_KEY="your-api-key"
 ```
 
-> Default model settings and chunking parameters are managed in `config.yaml`.
+Model, chunking parameters, and storage paths are configured in `config.yaml`.
 
 ---
 
 ## CLI Usage
 
-### 1. Build a Graph
+### 1. Build a Knowledge Graph
+
+Process a document and save the resulting graph:
 
 ```bash
 uv run python main.py process "data/novels/kim-camellia.txt" -o "kim-camellia-KG.json"
@@ -61,17 +106,30 @@ uv run python main.py process "data/novels/kim-camellia.txt" -o "kim-camellia-KG
 
 ### 2. Query
 
+Ask a question against an existing graph:
+
 ```bash
-uv run python main.py query "Explain the relationship between Jeom-soon and the rooster." -g "kim-camellia-KG.json"
+uv run python main.py query "Explain the relationship between Jeom-soon and the rooster." \
+  -g "kim-camellia-KG.json"
 ```
 
-### 3. Stats
+### 3. Interactive Mode
+
+Start a REPL-style session for multi-turn queries:
+
+```bash
+uv run python main.py interactive -g "kim-camellia-KG.json"
+```
+
+### 4. Graph Stats
+
+Inspect entity/relationship counts and type distributions:
 
 ```bash
 uv run python main.py stats -g "kim-camellia-KG.json"
 ```
 
-### 4. Streamlit Web UI
+### 5. Streamlit Web UI
 
 ```bash
 uv run python main.py app
@@ -94,7 +152,17 @@ uv run python main.py eval \
   -o "kim-camellia-eval-results.json"
 ```
 
-For detailed options and dataset format, see [docs/evaluation.md](docs/evaluation.md).
+Key options:
+
+| Flag | Default | Description |
+| :--- | :---: | :--- |
+| `--top-k` | 5 | Seed entities per query |
+| `--hops` | 2 | BFS traversal depth |
+| `--skip-generation` | off | Retrieval-only evaluation (no LLM answer) |
+| `--price-per-1k-input` | 0.00015 | USD per 1K input tokens |
+| `--price-per-1k-output` | 0.0006 | USD per 1K output tokens |
+
+For dataset format, see [docs/evaluation.md](docs/evaluation.md).
 
 ### Benchmark Results (Top-K=5, Hops=2–4)
 
@@ -117,18 +185,26 @@ uv run pytest
 
 ---
 
-## Data Structure
+## Data Layout
 
 ```
 data/
-├── novels/   # Source texts (<title>.txt)
-├── eval/     # Evaluation sets (<title>-eval.jsonl, <title>-hardset.jsonl)
-├── kg/       # Generated graphs (<title>-KG.json)
-└── results/  # Evaluation results (<title>-eval-results.json)
+├── novels/        # Source documents (<title>.txt)
+├── eval/          # Evaluation sets (<title>-eval.jsonl, <title>-hardset.jsonl)
+├── kg/            # Generated graphs (<title>-KG.json)
+└── results/       # Evaluation results (<title>-eval-results.json)
 ```
 
-The CLI automatically resolves relative paths against each default folder.
-Override with `--kg-dir`, `--dataset-dir`, `--results-dir` options or the environment variables `KG_DIR`, `DATASET_DIR`, `RESULTS_DIR`.
+Relative paths in CLI commands are resolved against the default directories above. Override with `--kg-dir`, `--dataset-dir`, `--results-dir` flags or the `KG_DIR`, `DATASET_DIR`, `RESULTS_DIR` environment variables.
+
+---
+
+## Further Reading
+
+- [Architecture & Algorithms](docs/README.md)
+- [Chunking Guide](docs/chunking.md)
+- [Entity Resolution Guide](docs/entity-resolution.md)
+- [Evaluation Guide](docs/evaluation.md)
 
 ---
 
